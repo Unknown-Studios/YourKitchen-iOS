@@ -14,7 +14,7 @@
 
 ### Developing
 
-To start developing on this project clone the git repository and develop the features you would like to see added or fix a bug that has been bugging you. After that you can submit a pull request.
+To start developing on this project clone the git repository and develop the features you would like to see added or fix a bug that has been bugging you. After that you can submit a .
 
 ## Issues
 
