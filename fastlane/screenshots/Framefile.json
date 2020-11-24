@@ -1,0 +1,58 @@
+{
+  "default": {
+    "keyword": {
+      "fonts": [
+        {
+          "font": "./fonts/Metropolis-SemiBold.otf",
+          "supported": ["en-US"]
+        }
+      ]
+    },
+    "title": {
+      "fonts": [
+        {
+          "font": "./fonts/Metropolis-Regular.otf",
+          "supported": ["en-US"]
+        }
+      ],
+      "color": "#e8e8e8"
+    },
+    "stack_title" : true,
+    "background": "./background.jpg",
+    "padding": 50
+  },
+
+
+  "data": [
+    {
+      "filter": "Recipes",
+      "keyword": {
+        "color": "#fff"
+      }
+    },
+    {
+      "filter": "Explore",
+      "keyword": {
+        "color": "#fff"
+      }
+    },
+    {
+      "filter": "Refrigerator",
+      "keyword": {
+        "color": "#fff"
+      }
+    },
+    {
+      "filter": "Mealplan",
+      "keyword": {
+        "color": "#fff"
+      }
+    },
+    {
+      "filter": "Profile",
+      "keyword": {
+        "color": "#fff"
+      }
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+//General
+"Home" = "Home";
+"Explore" = "Explore";
+"Refrigerator" = "Refrigerator";
+"Meal Plan" = "Meal Plan";
+"Profile" = "Profile";
+"Time" = "Time";
+"Steps" = "Steps";
+"Ingredients" = "Ingredients";
+"Shopping List" = "Shopping List";
+"Persons" = "Persons";
+"Actions" = "Actions";
+"Share" = "Share";
+"Yes" = "Yes";
+"No" = "No";
+"Okay" = "Okay";
+"Accept" = "Accept";
+"Deny" = "Deny";
+"Previous" = "Previous";
+"Next" = "Next";
+"Done" = "Done";
+"Step" = "Step";
+"Recipe" = "Recipe";
+"User" = "User";
+"Recipes with" = "Recipes with";
+"Ingredient" = "Ingredient";
+"General" = "General";
+"Current" = "Current";
+"Unit" = "Unit";
+"Units" = "Units";
+"Amount" = "Amount";
+"Type" = "Type";
+"Nothing here yet.." = "Nothing here yet..";
+"Recommended" = "Recommended";
+"Pending" = "Pending";
+"Submit" = "Submit";
+"Your" = "Your";
+
+//Onboarding
+"Ad Consent" = "Ad Consent";
+"We care about your privacy and data security." = "We care about your privacy and data security.";
+"Can we use your data to tailor ads for you?" = "Can we use your data to tailor ads for you?";
+"changeConsent" = "You can change your choice anytime for YourKitchen in the app settings. Our partners will collect data and use a unique identifier on your device to show you ads.";
+"aboutPrivacyPolicy" = "In our privacy policy you can see how we use your data and how this extends your user experience in our app";
+"partners" = "How our partners and us use data:";
+"Privacy Policy" = "Privacy Policy";
+"Tailored ads?" = "Tailored ads?";
+"Terms & Conditions" = "Terms & Conditions";
+"Do you agree to our terms?" = "Do you agree to our terms?";
+"Likes" = "Likes";
+
+//Alert
+"Are you sure?" = "Are you sure?";
+"Are you sure you want to delete this recipe?" = "Are you sure you want to delete this recipe?";
+
+//Login
+"Login" = "Login";
+"Error" = "Error";
+"Sign in with " = "Sign in with ";
+
+//Filter
+"None" = "None";
+"Vegetarian" = "Vegetarian";
+"Vegan" = "Vegan";
+"Under 30 min." = "Under 30 min.";
+"Max ingredients: " = "Max ingredients: ";
+
+//Refrigerator
+"Select new ingredient" = "Select new ingredient";
+
+//Action
+"Edit" = "Edit";
+"Share Refrigerator" = "Share Refrigerator";
+
+//RecipesWith
+"Recipes with " = "Recipes with ";
+
+//Notifications
+"No notifications.." = "No notifications";
+"Do you want to accept the request?" = "Do you want to accept the request?";
+
+//UserDetailView
+"Score" = "Score";
+"Follow" = "Follow";
+"Unfollow" = "Unfollow";
+
+//RecipeDetailView
+"Add to Shopping List" = "Add to Shopping List";
+"Select another recipe" = "Select another recipe";
+"Edit Recipe" = "Edit Recipe";
+"Select recipe" = "Select recipe";
+"Make this recipe" = "Make this recipe";
+
+//EditRecipeView/AddRecipeView
+"Select preparation time" = "Select preparation time";
+"Select Cuisine" = "Select Cuisine";
+"Cuisine" = "Cuisine";
+"Select Type" = "Select Type";
+"Recipe Type" = "Recipe Type";
+"Select persons" = "Select persons";
+"Image select" = "Image select";
+"Select an image" = "Select an image";
+"Ingredients" = "Ingredients";
+"Add ingredient" = "Add ingredient";
+
+//IngredientList
+"Add new ingredient" = "Add new ingredient";
+
+//AddIngredientView
+"Allergen Type" = "Allergen Type";
+
+//ShoppingListView
+"Select new item" = "Select new item";
+"Selected page" = "Selected page";
+"Selected Meal Plan" = "Selected Meal Plan";
+
+//ShareMealplanView
+"Followed Meal Plans" = "Followed Meal Plans";
+"Users Following My Meal Plan";
+
+//Premium
+"Get Premium Membership" = "Get Premium Membership";
+"Restore Purchases" = "Restore Purchases";
+"Manage subscription" = "Manage subscription";
+
+//Feedback
+"Please share your comments and suggestions with us." = "Please share your comments and suggestions with us.";
+"Your Feedback" = "Your Feedback";
+"Anonymize" = "Anonymize";
+"Send Feedback" = "Send Feedback";
+
+"Please share your issues with us and let us know how to improve." = "Please share your issues with us and let us know how to improve";
+
+//Settings
+"Allergenes" = "Allergenes";
+"Enter code" = "Enter code";
+"Feedback" = "Feedback";
+"Report issue" = "Report issue";
+"Data" = "Data";
+"About" = "About";
+"Licenses" = "Licenses";
+"Clear Cache" = "Clear Cache";
+"Delete User" = "Delete User";
+"Sign out" = "Sign out";
+"Logout" = "Logout";
+"Are you sure you want to sign out?" = "Are you sure you want to sign out?";
+
+//Categories
+"All" = "All";
+"American" = "American";
+"Brazilian" = "Brazilian";
+"British" = "British";
+"Carribean" = "Carribean";
+"Chinese" = "Chinese";
+"French" = "French";
+"Greek" = "Greek";
+"Indian" = "Indian";
+"Italian" = "Italian";
+"Japanese" = "Japanese";
+"Mediterranean" = "Mediterranean";
+"Mexican" = "Mexican";
+"Moroccan" = "Moroccan";
+"Spanish" = "Spanish";
+"Thai" = "Thai";
+"Vietnamese" = "Vietnamese";
+"Other" = "Other";
+
+"Enter the following code on the app or the website" = "Enter the following code on the app or the website";
+"You need to sign in on the iOS app, before you can continue" = "You need to sign in on the iOS app, before you can continue";
+"Today's meal" = "Today's meal";
+"An error occured" = "An error occured";

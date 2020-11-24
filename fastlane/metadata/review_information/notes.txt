@@ -1,0 +1,2 @@
+If sign in is needed without using any of the provided login providers, the app needs to be run with the launch argument 
+-uiTesting

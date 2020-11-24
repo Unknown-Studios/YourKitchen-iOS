@@ -1,0 +1,40 @@
+name: build_ios
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build:
+    name: Build and deploy to testflight
+    runs-on: macos-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout/Users/markusmoltke/Documents/Hobby/YourKitchen/YourKitcheniOS/fastlane/Fastfile
+        uses: actions/checkout@v2
+      - uses: actions/cache@v1
+        with:
+            path: Pods
+            key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+            restore-keys: |
+                ${{ runner.os }}-pods-
+      - name: Install Dependencies
+        run: |
+            gem install bundler
+            gem install cocoapods
+      - name: Run fastlane lane test
+        uses: maierj/fastlane-action@v1.4.0
+        env:
+          FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+          GIT_REPO_URL: ${{ secrets.GIT_REPO_URL }}
+          GIT_ACCESS: ${{ secrets.GIT_ACCESS }}
+          CI_KEYCHAIN_NAME: ${{ secrets.CI_KEYCHAIN_NAME }}
+          CI_KEYCHAIN_PASSWORD: ${{ secrets.CI_KEYCHAIN_PASSWORD }}
+          DEVELOPER_TEAM_ID: ${{ secrets.DEVELOPER_TEAM_ID }}
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+        with:
+          lane: 'github_test'

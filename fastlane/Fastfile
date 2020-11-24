@@ -1,0 +1,282 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Setup the iOS app"
+  lane :setup do 
+    # XCode setup
+    bundle_install
+
+    # Pods setup
+    cocoapods
+
+    # Config
+    content = load_json(json_path: "config.json")
+    update_project_team(
+      path: "YourKitchen.xcodeproj",
+      teamid: content["teamid"]
+    )
+  end
+
+  lane :github_test do
+    if is_ci 
+      create_keychain(
+        name: ENV["CI_KEYCHAIN_NAME"],
+        password: ENV["CI_KEYCHAIN_PASSWORD"],
+        default_keychain: true,
+        unlock: true,
+        timeout: 3600,
+        lock_when_sleeps: false
+      )
+    end
+    match(
+      app_identifier: "com.unknown-studios.YourKitchen",
+      git_url: ENV["GIT_REPO_URL"],
+      git_basic_authorization: ENV["GIT_ACCESS"],
+      type: "appstore",
+      username: ENV["FIREBASE_USER"],
+      team_id: ENV["DEVELOPER_TEAM_ID"],
+      keychain_name: ENV["CI_KEYCHAIN_NAME"],
+      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
+      readonly: true
+    )
+
+    cert
+
+    increment_build_number
+    cocoapods
+    gym(
+      silent: true,
+      suppress_xcode_output: true
+    )
+    upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
+    pilot(ipa: './build/YourKitchen.ipa', skip_waiting_for_build_processing: true)
+  end
+
+  desc "Take screenshots of the app"
+  lane :screenshot do
+    snapshot
+    frameit
+  end
+
+  desc "Deploy a test to testflight"
+  lane :test do 
+    increment_build_number
+
+    sigh
+    gym(
+      silent: true,
+      suppress_xcode_output: true
+    )
+    upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
+    pilot(ipa: './build/YourKitchen.ipa', skip_waiting_for_build_processing: true)
+  end
+
+  desc "Distribute version to Firebase"
+  lane :distributeFirebase do
+    increment_build_number
+    if is_ci 
+      create_keychain(
+        name: ENV["CI_KEYCHAIN_NAME"],
+        password: ENV["CI_KEYCHAIN_PASSWORD"],
+        default_keychain: true,
+        unlock: true,
+        timeout: 3600,
+        lock_when_sleeps: false
+      )
+    end
+    match(
+      app_identifier: "com.unknown-studios.YourKitchen",
+      git_url: ENV["GIT_REPO_URL"],
+      git_basic_authorization: ENV["GIT_ACCESS"],
+      type: "appstore",
+      username: ENV["FIREBASE_USER"],
+      team_id: ENV["DEVELOPER_TEAM_ID"],
+      keychain_name: ENV["CI_KEYCHAIN_NAME"],
+      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
+      readonly: true
+    )
+
+    cert
+    gym(
+      export_method: 'ad-hoc',
+      silent: true,
+      suppress_xcode_output: true
+    )
+    firebase_app_distribution(
+        app: "1:486079812811:ios:46ee85d01ebe6876ffb74e",
+        release_notes: "Lots of amazing new features to test out!",
+        groups: "Main"
+    )
+    upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
+  end
+
+  desc "Check for errors"
+  lane :error do 
+    swiftlint(quiet:true, mode: :autocorrect)
+    swiftlint(quiet:true)
+    scan(
+      derived_data_path: "",
+      workspace: "YourKitchen.xcworkspace",
+      devices: ["iPhone 8", "iPad (7th generation)"],
+      scheme: "YourKitchen",
+      test_without_building: true
+    )
+  end
+
+  desc "Upload dSYM to Crashlytics"
+  lane :uploadDSYM do
+      upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
+  end
+
+  desc "Create documentation"
+  lane :documentation do 
+    appledoc
+  end
+
+  desc "Deploy app to appstore (With screenshots, only run on mayor releases)"
+  lane :deploy do
+    increment_build_number
+    if is_ci 
+      create_keychain(
+        name: ENV["CI_KEYCHAIN_NAME"],
+        password: ENV["CI_KEYCHAIN_PASSWORD"],
+        default_keychain: true,
+        unlock: true,
+        timeout: 3600,
+        lock_when_sleeps: false
+      )
+    end
+    match(
+      app_identifier: "com.unknown-studios.YourKitchen",
+      git_url: ENV["GIT_REPO_URL"],
+      git_basic_authorization: ENV["GIT_ACCESS"],
+      type: "appstore",
+      username: ENV["FIREBASE_USER"],
+      team_id: ENV["DEVELOPER_TEAM_ID"],
+      keychain_name: ENV["CI_KEYCHAIN_NAME"],
+      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
+      readonly: true
+    )
+    cert
+    # Build for testing to speed up snapshots
+    run_tests(
+      build_for_testing: true,
+      code_coverage: false,
+      derived_data_path: "../../../Library/Developer/Xcode/DerivedData/YourKitchen",
+      scheme: "Snapshots",
+      suppress_xcode_output: false,
+    )
+    snapshot(
+      clear_previous_screenshots: true,
+      skip_open_summary: true,
+      test_without_building: true,
+      derived_data_path: "../../../Library/Developer/Xcode/DerivedData/YourKitchen",
+      scheme: "Snapshots"
+    )
+    frameit
+    gym(
+      silent: true,
+      suppress_xcode_output: true
+    )
+    upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
+    deliver(
+      force: true,
+      skip_metadata: true,
+      overwrite_screenshots: true
+    )
+  end
+
+  desc "Fast deploy (No screenshots)"
+  lane :fastDeploy do
+    increment_build_number
+    sh(command: "rm -vfr ~/Library/Developer/Xcode/Archives/*")
+
+    if is_ci 
+      create_keychain(
+        name: ENV["CI_KEYCHAIN_NAME"],
+        password: ENV["CI_KEYCHAIN_PASSWORD"],
+        default_keychain: true,
+        unlock: true,
+        timeout: 3600,
+        lock_when_sleeps: false
+      )
+    end
+    match(
+      app_identifier: "com.unknown-studios.YourKitchen",
+      git_url: ENV["GIT_REPO_URL"],
+      git_basic_authorization: ENV["GIT_ACCESS"],
+      type: "appstore",
+      username: ENV["FIREBASE_USER"],
+      team_id: ENV["DEVELOPER_TEAM_ID"],
+      keychain_name: ENV["CI_KEYCHAIN_NAME"],
+      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
+      readonly: true
+    )
+
+    cert
+    gym(
+      silent: true,
+      suppress_xcode_output: true
+    )
+
+    upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
+    deliver(
+      force: true,
+      skip_metadata: true,
+      skip_screenshots: true
+    )
+  end
+
+
+  desc "Fast deploy (No screenshots)"
+  lane :fastDeployTV do 
+    sigh(platform: "tvos")
+    gym(
+      scheme: "YourKitchenTV",
+      silent: true,
+      suppress_xcode_output: true
+    )
+    deliver(
+      force: true,
+      skip_metadata: true,
+      skip_screenshots: true,
+      platform: "appletvos"
+    )
+  end
+
+  desc "Deploy (With Screenshots)"
+  lane :deployTV do 
+    sigh(platform: "tvos")
+    snapshot(
+      scheme: "SnapshotsTV",
+      devices: ["Apple TV 4K"],
+      clear_previous_screenshots: true,
+      skip_open_summary: true
+    )
+    gym(
+      scheme: "YourKitchenTV",
+      silent: true,
+      suppress_xcode_output: true
+    )
+    deliver(
+      force: true,
+      skip_metadata: true,
+      platform: "appletvos"
+    )
+  end
+end

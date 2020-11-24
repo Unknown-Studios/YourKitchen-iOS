@@ -1,0 +1,171 @@
+
+//General
+"Home" = "Hjem";
+"Explore" = "Udforsk";
+"Refrigerator" = "Køleskab";
+"Meal Plan" = "Madplan";
+"Profile" = "Profil";
+"Time" = "Tid";
+"Steps" = "Trin";
+"Ingredients" = "Ingredienser";
+"Shopping List" = "Indkøbsliste";
+"Persons" = "Personer";
+"Actions" = "Handlinger";
+"Share" = "Del";
+"Yes" = "Ja";
+"No" = "Nej";
+"Accept" = "Accepter";
+"Deny" = "Afvis";
+"Previous" = "Forrige";
+"Next" = "Næste";
+"Done" = "Færdig";
+"Step" = "Skridt";
+"Recipe" = "Opskrift";
+"User" = "Bruger";
+"Recipes with" = "Opskrifter med";
+"Ingredient" = "Ingredienser";
+"General" = "Generelt";
+"Current" = "Nuværende";
+"Unit" = "Enhed";
+"Units" = "Enheder";
+"Amount" = "Mængde";
+"Type" = "Type";
+"Nothing here yet.." = "Intet at vise, endnu..";
+"Recommended" = "Anbefalet";
+"Pending" = "Venter";
+"Submit" = "Indsend";
+"Your" = "Dit";
+
+//Onboarding
+"Ad Consent" = "Reklame Samtykke";
+"We care about your privacy and data security." = "Vi går op i dit privatliv og din data sikkerhed";
+"Can we use your data to tailor ads for you?" = "Kan vi bruge din data til at gøre dine reklamer personlige?";
+"changeConsent" = "Du kan ændre dine valg på et hvilket som helst tidspunkt under indstillingerne. Vores partnere samler også data og bruger et unikt ID på din enhed til at vise dig reklamer.";
+"aboutPrivacyPolicy" = "I vores privatlivspolitik kan du se hvordan vi bruger din data og hvordan dette gavner din brugeroplevelse.";
+"partners" = "Hvordan vores partnere og os bruger din data:";
+"Privacy Policy" = "Privatlivspolitik";
+"Tailored ads?" = "Personlige reklamer?";
+"Terms & Conditions" = "Vilkår og Betingelser";
+"Do you agree to our terms?" = "Er du enige i vores vilkår?";
+"Likes" = "Likes";
+
+//Alert
+"Are you sure?" = "Er du sikker?";
+"Are you sure you want to delete this recipe?" = "Er du sikker på at du vil slette denne opskrift?";
+
+//Login
+"Login" = "Log på";
+"Error" = "Fejl";
+"Sign in with " = "Log ind med ";
+
+//Filter
+"None" = "Ingen";
+"Vegetarian" = "Vegetar";
+"Vegan" = "Veganer";
+"Under 30 min." = "Under 30 min.";
+"Max ingredients: " = "Maks ingredients: ";
+
+//Refrigerator
+"Select new ingredient" = "Vælg ny ingrediens";
+
+//Action
+"Edit" = "Ændre";
+"Share Refrigerator" = "Del Køleskab";
+
+//RecipesWith
+"Recipes with " = "Opskrifter med ";
+
+//Notifications
+"No notifications.." = "Ingen beskeder";
+"Do you want to accept the request?" = "Vil du acceptere forespørgslen?";
+
+//UserDetailView
+"Score" = "Score";
+"Follow" = "Følg";
+"Unfollow" = "Følg ikke";
+
+//RecipeDetailView
+"Add to Shopping List" = "Tilføj til indkøbsliste";
+"Select another recipe" = "Vælg en anden opskrift";
+"Edit Recipe" = "Ændr opskrift";
+"Select recipe" = "Vælg opskrift";
+"Start Cooking" = "Start madlavning";
+"By " = "Af ";
+
+//EditRecipeView/AddRecipeView
+"Select preparation time" = "Vælg forberedelsestid";
+"Select Cuisine" = "Vælg køkken";
+"Cuisine" = "Køkken";
+"Select Type" = "Vælg Type";
+"Recipe Type" = "OpskriftType";
+"Select persons" = "Vælg personer";
+"Image select" = "Vælg billede";
+"Select an image" = "Vælg et billede";
+"Add ingredient" = "Tilføj ingrediens";
+
+//IngredientList
+"Add new ingredient" = "Tilføj ny ingrediens";
+
+//AddIngredientView
+"Allergen Type" = "Allergen Typer";
+
+//ShoppingListView
+"Select new item" = "Vælg ny ting";
+"Selected page" = "Valgt side";
+"Selected Meal Plan" = "Valgt madplan";
+
+//ShareMealplanView
+"Followed Meal Plans" = "Følg madplan";
+"Users Following My Meal Plan" = "Brugere der følger min madplan";
+
+//Premium
+"Get Premium Membership" = "Få premium medlemskab";
+"Restore Purchases" = "Genopret køb";
+"Manage subscription" = "Administrer abonnement";
+
+//Feedback
+"Please share your comments and suggestions with us." = "Del dine kommentarer og forslag med os.";
+"Your Feedback" = "Din Feedback";
+"Anonymize" = "Anonymiser";
+"Send Feedback" = "Send Feedback";
+
+"Please share your issues with us and let us know how to improve." = "Del dine problemer med os og så vi ved hvordan vi skal forbedre os.";
+
+//Settings
+"Allergenes" = "Allergener";
+"Enter code" = "Indtast kode";
+"Feedback" = "Feedback";
+"Report issue" = "Raporter fejl";
+"About" = "Om";
+"Licenses" = "Licenser";
+"Clear Cache" = "Ryd cache";
+"Delete User" = "Slet bruger";
+"Sign out" = "Log ud";
+"Logout" = "Log ud";
+"Are you sure you want to sign out?" = "Er du sikker på at du vil logge ud?";
+
+//Categories
+"All" = "Alle";
+"American" = "Amerikansk";
+"Brazilian" = "Brasiliansk";
+"British" = "Britisk";
+"Carribean" = "Caribien";
+"Chinese" = "Kinesisk";
+"French" = "Fransk";
+"Greek" = "Græsk";
+"Indian" = "Indisk";
+"Italian" = "Italiensk";
+"Japanese" = "Japansk";
+"Mediterranean" = "Middelhavs";
+"Mexican" = "Mexikansk";
+"Moroccan" = "Marokansk";
+"Spanish" = "Spansk";
+"Thai" = "Thailansk";
+"Vietnamese" = "Vietnamesisk";
+"Other" = "Andre";
+
+//TV, Watch
+"Enter the following code on the app or the website" = "Indtast den følgende kode på appen eller på hjemmesiden";
+"You need to sign in on the iOS app, before you can continue" = "Du skal logge ind på iOS appen før du kan fortsætte";
+"Today's meal" = "Dagens måltid";
+"An error occured" = "Der er sket en fejl";
