@@ -55,8 +55,6 @@ platform :ios do
       readonly: true
     )
 
-    cert
-
     increment_build_number
     cocoapods
     gym(
