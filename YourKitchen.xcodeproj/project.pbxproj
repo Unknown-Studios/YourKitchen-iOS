@@ -197,7 +197,6 @@
 		18C8BB7A247DE3A900D61953 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8BB79247DE3A900D61953 /* AddRecipeView.swift */; };
 		18CEF7DE249A7FDC00EBD0A8 /* RecipeTypeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7DD249A7FDC00EBD0A8 /* RecipeTypeRow.swift */; };
 		18CEF7E0249AC18400EBD0A8 /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7DF249AC18300EBD0A8 /* SelectCategoryView.swift */; };
-		18D169DC24533C730098C584 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 18D169DB24533C720098C584 /* config.json */; };
 		18D7A4C724911B5F00CC9CEC /* SocialMealplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7A4C624911B5E00CC9CEC /* SocialMealplan.swift */; };
 		18D83BBB249157D70047A2C2 /* ActionOver in Frameworks */ = {isa = PBXBuildFile; productRef = 18D83BBA249157D70047A2C2 /* ActionOver */; };
 		18D83BBD249196D90047A2C2 /* ShareRefrigeratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D83BBC249196D90047A2C2 /* ShareRefrigeratorView.swift */; };
@@ -1700,7 +1699,6 @@
 				18245F892489805C004F88F4 /* fontawesome900.otf in Resources */,
 				18B6AA592451FA3900DA487E /* LaunchScreen.storyboard in Resources */,
 				18245F882489805C004F88F4 /* fontawesomeeregular.otf in Resources */,
-				18D169DC24533C730098C584 /* config.json in Resources */,
 				18A292A7247C8402000FF100 /* GoogleService-Info.plist in Resources */,
 				18245F8A2489805C004F88F4 /* fontawesomebrands.otf in Resources */,
 				18245F8C24899194004F88F4 /* icons.json in Resources */,
@@ -2245,7 +2243,7 @@
 				CODE_SIGN_ENTITLEMENTS = YourKitchenWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 157;
+				CURRENT_PROJECT_VERSION = 158;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				INFOPLIST_FILE = YourKitchenWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -2274,7 +2272,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 157;
+				CURRENT_PROJECT_VERSION = 158;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				INFOPLIST_FILE = YourKitchenWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -2382,7 +2380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 157;
+				CURRENT_PROJECT_VERSION = 158;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				IBSC_MODULE = WatchOS_Extension;
 				INFOPLIST_FILE = WatchOS/Info.plist;
@@ -2406,7 +2404,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 157;
+				CURRENT_PROJECT_VERSION = 158;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				IBSC_MODULE = WatchOS_Extension;
 				INFOPLIST_FILE = WatchOS/Info.plist;
@@ -2428,7 +2426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 157;
+				CURRENT_PROJECT_VERSION = 158;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchOS Extension/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				ENABLE_PREVIEWS = YES;
@@ -2457,7 +2455,7 @@
 				CODE_SIGN_ENTITLEMENTS = "WatchOS Extension/WatchOS ExtensionRelease.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 157;
+				CURRENT_PROJECT_VERSION = 158;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchOS Extension/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				ENABLE_PREVIEWS = YES;
@@ -2606,7 +2604,7 @@
 				CODE_SIGN_ENTITLEMENTS = YourKitchen.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 157;
+				CURRENT_PROJECT_VERSION = 158;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchen/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
@@ -2683,7 +2681,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 157;
+				CURRENT_PROJECT_VERSION = 158;
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchen/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				ENABLE_PREVIEWS = YES;
@@ -2759,7 +2757,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_ENTITLEMENTS = YourKitchenTV/YourKitchenTV.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 157;
+				CURRENT_PROJECT_VERSION = 158;
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchenTV/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				ENABLE_PREVIEWS = YES;
@@ -2787,7 +2785,7 @@
 				CODE_SIGN_ENTITLEMENTS = YourKitchenTV/YourKitchenTV.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 157;
+				CURRENT_PROJECT_VERSION = 158;
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchenTV/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				ENABLE_PREVIEWS = YES;

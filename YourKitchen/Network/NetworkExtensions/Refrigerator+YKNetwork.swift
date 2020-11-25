@@ -122,7 +122,7 @@ public extension YKNetworkManager {
 
         public static func update(refrigerator: Refrigerator, completion: (() -> Void)? = nil) {
             let fstore = Firestore.firestore()
-            guard Auth.auth().currentUser != nil else {
+            guard let user = YKNetworkManager.shared.currentUser else {
                 return
             }
             let tmpRefrigerator = refrigerator
@@ -133,6 +133,9 @@ public extension YKNetworkManager {
                 if let err = err {
                     UserResponse.displayError(msg: "Refrigerator/update " + err.localizedDescription)
                     return
+                }
+                if (tmpRefrigerator.ownerId == user.id) {
+                    Refrigerators.cache.setObject(refrigerator, forKey: user.id as NSString)
                 }
             })
         }
