@@ -30,3 +30,4 @@ jobs:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
           CI_KEYCHAIN_NAME: ${{ secrets.CI_KEYCHAIN_NAME }}
           CI_KEYCHAIN_PASSWORD: ${{ secrets.CI_KEYCHAIN_PASSWORD }}
+          GIT_ACCESS: ${{ secrets.GIT_ACCESS }}
