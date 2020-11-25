@@ -19,7 +19,9 @@ jobs:
       - name: Bundle Install
         run: bundle install
       - name: Set Appstore Connect User
-        run: bundle exec fastlane fastlane-credentials add --username ${{ secrets.FASTLANE_USER }} --password ${{ secrets.FASTLANE_PASSWORD }}
+        run: bundle exec fastlane fastlane-credentials add --username ${{ secrets.FASTLANE_USER }} 
+        env:
+          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
       - name: Fastlane Beta CI
         run: bundle exec fastlane github_test
         env:
