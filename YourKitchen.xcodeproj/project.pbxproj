@@ -197,7 +197,6 @@
 		18C8BB7A247DE3A900D61953 /* AddRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C8BB79247DE3A900D61953 /* AddRecipeView.swift */; };
 		18CEF7DE249A7FDC00EBD0A8 /* RecipeTypeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7DD249A7FDC00EBD0A8 /* RecipeTypeRow.swift */; };
 		18CEF7E0249AC18400EBD0A8 /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7DF249AC18300EBD0A8 /* SelectCategoryView.swift */; };
-		18D169DC24533C730098C584 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 18D169DB24533C720098C584 /* config.json */; };
 		18D7A4C724911B5F00CC9CEC /* SocialMealplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7A4C624911B5E00CC9CEC /* SocialMealplan.swift */; };
 		18D83BBB249157D70047A2C2 /* ActionOver in Frameworks */ = {isa = PBXBuildFile; productRef = 18D83BBA249157D70047A2C2 /* ActionOver */; };
 		18D83BBD249196D90047A2C2 /* ShareRefrigeratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D83BBC249196D90047A2C2 /* ShareRefrigeratorView.swift */; };
@@ -1700,7 +1699,6 @@
 				18245F892489805C004F88F4 /* fontawesome900.otf in Resources */,
 				18B6AA592451FA3900DA487E /* LaunchScreen.storyboard in Resources */,
 				18245F882489805C004F88F4 /* fontawesomeeregular.otf in Resources */,
-				18D169DC24533C730098C584 /* config.json in Resources */,
 				18A292A7247C8402000FF100 /* GoogleService-Info.plist in Resources */,
 				18245F8A2489805C004F88F4 /* fontawesomebrands.otf in Resources */,
 				18245F8C24899194004F88F4 /* icons.json in Resources */,

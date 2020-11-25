@@ -21,6 +21,7 @@ struct RecipeDetailView: SwiftUI.View {
     // @ObservedObject var recipeWrapper : RecipeWrapper
 
     @State var recipe: Recipe
+    @State var refrigerator: Refrigerator = Refrigerator.none
     @State var weekday: Date
     var completion: ((Date, Recipe) -> Void)?
     @State var rating = 0
@@ -29,6 +30,7 @@ struct RecipeDetailView: SwiftUI.View {
     @State var votedThumbsdown = false
     @State var votedThumbsup = false
     @State var showDeletePrompt = false
+    @State var selectShopping = [Ingredient: Bool]()
 
     var viewModel = MealplanViewModel()
 
@@ -139,7 +141,21 @@ struct RecipeDetailView: SwiftUI.View {
                             }.padding()
                         }
                         ForEach(self.recipe.ingredients, id: \.self) { ingredient in
-                            YKRow(leftText: String(format: "%.0f", (Double(ingredient.amount) * (Double(self.selectedPersons) / Double(recipe.persons)))) + ingredient.unit, rightText: ingredient.name)
+                            Button(action: {
+                                self.selectShopping[ingredient] = !(self.selectShopping[ingredient] ?? false)
+                            }) {
+                                HStack {
+                                    Image(systemName: self.selectShopping[ingredient] ?? false ? "largecircle.fill.circle" : "circle")
+                                        .foregroundColor(self.selectShopping.contains(where: { (k,v) -> Bool in
+                                            k.id == ingredient.id && v
+                                        }) ? .green : .primary)
+                                        .imageScale(.large)
+                                    Text(String(format: "%.0f", (Double(ingredient.amount) * (Double(self.selectedPersons) / Double(recipe.persons)))) + ingredient.unit)
+                                        .frame(width: 50)
+                                    Text(ingredient.name)
+                                    Spacer()
+                                }
+                            }.padding(8)
                         }
                         ForEach(self.recipe.recipes, id: \.self) { (recipe) in
                             NavigationLink(
@@ -208,6 +224,24 @@ struct RecipeDetailView: SwiftUI.View {
                 Analytics.logEvent(AnalyticsEventScreenView,
                                    parameters: [AnalyticsParameterScreenName: "Recipe Detail",
                                                 AnalyticsParameterScreenClass: RecipeDetailView.self])
+            }.onDisappear {
+                // For all items from the shopping list that are selected
+                for (k, v) in self.selectShopping where v { //Loop through all selected options
+                    if let first = self.refrigerator.ingredients.filter({ $0.id == k.id }).first {
+                        if first.amount - k.amount <= 0 {
+                            self.refrigerator.ingredients.removeAll(where: { $0.id == k.id })
+                        } else {
+                            if let index = self.refrigerator.ingredients.firstIndex(where: { $0.id == k.id }) {
+                                self.refrigerator.ingredients[index].amount = first.amount - k.amount
+                            }
+                        }
+                    }
+                    if v { //If it is selected remove it.
+                        self.refrigerator.ingredients.append(k)
+                    }
+                    self.selectShopping[k] = nil
+                }
+                self.updateRefrigerator()
             }
         }
         .navigationBarTitle("", displayMode: .large)
@@ -336,6 +370,13 @@ struct RecipeDetailView: SwiftUI.View {
             self.recipe = newRecipe
             self.rating = recipe.rating
         }
+        YKNetworkManager.Refrigerators.get { (refrigerator) in
+            guard let refrigerator = refrigerator else { return }
+            for ing in refrigerator.ingredients {
+                self.selectShopping[ing] = true
+            }
+            self.refrigerator = refrigerator
+        }
     }
 
     func getRating() {
@@ -364,6 +405,12 @@ struct RecipeDetailView: SwiftUI.View {
         }
         YKNetworkManager.Interests.update(ratings: [self.recipe.type.caseName: rating])
     }
+    
+    func updateRefrigerator() {
+        print("Updating refrigerator")
+        YKNetworkManager.Refrigerators.update(refrigerator: self.refrigerator)
+    }
+
 }
 
 extension UINavigationController: UIGestureRecognizerDelegate {
