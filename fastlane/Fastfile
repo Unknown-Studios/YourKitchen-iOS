@@ -30,12 +30,14 @@ platform :ios do
     end
     match(
       type: "development", 
+      git_basic_authorization: ENV["GIT_ACCESS"],
       readonly: is_ci, 
       keychain_name: ENV["CI_KEYCHAIN_NAME"], 
       keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
     )
     match(
       type: "appstore", 
+      git_basic_authorization: ENV["GIT_ACCESS"],
       readonly: is_ci, 
       keychain_name: ENV["CI_KEYCHAIN_NAME"], 
       keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
@@ -45,7 +47,7 @@ platform :ios do
     #  git_url: ENV["GIT_REPO_URL"],
     #  git_basic_authorization: ENV["GIT_ACCESS"],
     #  type: "appstore",
-    #  username: ENV["FIREBASE_USER"],
+    #  username: ENV["FASTLANE_USER"],
     #  team_id: ENV["DEVELOPER_TEAM_ID"],
     #  keychain_name: ENV["CI_KEYCHAIN_NAME"],
     #  keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
