@@ -16,23 +16,8 @@ update_fastlane
 default_platform(:ios)
 
 platform :ios do
-  desc "Setup the iOS app"
-  lane :setup do 
-    # XCode setup
-    bundle_install
-
-    # Pods setup
-    cocoapods
-
-    # Config
-    content = load_json(json_path: "config.json")
-    update_project_team(
-      path: "YourKitchen.xcodeproj",
-      teamid: content["teamid"]
-    )
-  end
-
   lane :github_test do
+    increment_build_number
     if is_ci 
       create_keychain(
         name: ENV["CI_KEYCHAIN_NAME"],
@@ -44,25 +29,37 @@ platform :ios do
       )
     end
     match(
-      app_identifier: "com.unknown-studios.YourKitchen",
-      git_url: ENV["GIT_REPO_URL"],
-      git_basic_authorization: ENV["GIT_ACCESS"],
-      type: "appstore",
-      username: ENV["FIREBASE_USER"],
-      team_id: ENV["DEVELOPER_TEAM_ID"],
-      keychain_name: ENV["CI_KEYCHAIN_NAME"],
-      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
-      readonly: true
+      type: "development", 
+      readonly: is_ci, 
+      keychain_name: ENV["CI_KEYCHAIN_NAME"], 
+      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
     )
+    match(
+      type: "appstore", 
+      readonly: is_ci, 
+      keychain_name: ENV["CI_KEYCHAIN_NAME"], 
+      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
+    )
+    #match(
+    #  app_identifier: "com.unknown-studios.YourKitchen",
+    #  git_url: ENV["GIT_REPO_URL"],
+    #  git_basic_authorization: ENV["GIT_ACCESS"],
+    #  type: "appstore",
+    #  username: ENV["FIREBASE_USER"],
+    #  team_id: ENV["DEVELOPER_TEAM_ID"],
+    #  keychain_name: ENV["CI_KEYCHAIN_NAME"],
+    #  keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
+    #  readonly: true
+    #)
 
-    increment_build_number
     cocoapods
-    gym(
-      silent: true,
-      suppress_xcode_output: true
-    )
+    #gym(
+    #  silent: true,
+    #  suppress_xcode_output: true
+    #)
+    build_app(workspace: "YourKitchen.xcworkspace", scheme: "YourKitchen")
     upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
-    pilot(ipa: './build/YourKitchen.ipa', skip_waiting_for_build_processing: true)
+    pilot(ipa: './build/YourKitchen.ipa', skip_waiting_for_build_processing: true, username: ENV["FASTLANE_USER"])
   end
 
   desc "Take screenshots of the app"
