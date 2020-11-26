@@ -75,9 +75,11 @@ platform :ios do
       workspace: "YourKitchen.xcworkspace",
     )
     upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
-    pilot(
+    upload_to_testflight(
       ipa: './build/YourKitchen.ipa', 
-      skip_waiting_for_build_processing: true
+      skip_waiting_for_build_processing: is_ci,
+      username: ENV["FASTLANE_USER"],
+      uses_non_exempt_encryption: true
     )
   end
 
