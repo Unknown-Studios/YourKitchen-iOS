@@ -15,7 +15,6 @@ update_fastlane
 default_platform(:ios)
 
 def build_release
-  cocoapods()
   if is_ci
     create_keychain(
       name: ENV["CI_KEYCHAIN_NAME"],
@@ -27,6 +26,7 @@ def build_release
     )
     match(
       type: "appstore",
+      git_basic_authorization: ENV["GIT_ACCESS"],
       readonly: true,
       keychain_name: ENV["CI_KEYCHAIN_NAME"],
       keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
@@ -50,6 +50,7 @@ def build_release
       readonly: true
     )
   end
+  cocoapods()
   gym(
     workspace: "YourKitchen.xcworkspace",
     scheme: "YourKitchen",
