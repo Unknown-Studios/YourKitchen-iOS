@@ -18,6 +18,11 @@ jobs:
         uses: snickerbockers/submodules-init@v4
       - name: Bundle Install
         run: bundle install
+      - name: Setup Firebase
+        run: 'echo "$GOOGLE_PLIST" > GoogleService-Info.plist; mv GoogleService-Info.plist ./YourKitchen/Misc/'
+        shell: bash
+        env:
+          GOOGLE_PLIST: ${{secrets.GOOGLE_PLIST}}
       - name: Set Appstore Connect User
         run: bundle exec fastlane fastlane-credentials add --password ${{ secrets.FASTLANE_PASSWORD }} --username ${{ secrets.FASTLANE_USER }} 
         env:

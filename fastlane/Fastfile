@@ -45,24 +45,28 @@ platform :ios do
       xcodeproj: "YourKitchen.xcodeproj",
       profile: ENV["sigh_com.unknown-studios.YourKitchen_appstore_profile-path"],
       target_filter: "YourKitchen$", 
+      build_configuration: "Release",
       code_signing_identity: "Apple Distribution: Markus Moltke (57VP6CT5HC)"
     )
     update_project_provisioning(
       xcodeproj: "YourKitchen.xcodeproj",
       profile: ENV["sigh_com.unknown-studios.YourKitchen.YKWidget_appstore_profile-path"],
       target_filter: "YourKitchenWidgetExtension.*", 
+      build_configuration: "Release",
       code_signing_identity: "Apple Distribution: Markus Moltke (57VP6CT5HC)"
     )
     update_project_provisioning(
       xcodeproj: "YourKitchen.xcodeproj",
       profile: ENV["sigh_com.unknown-studios.YourKitchen.watchkitapp_appstore_profile-path"],
       target_filter: "WatchOS$", 
+      build_configuration: "Release",
       code_signing_identity: "Apple Distribution: Markus Moltke (57VP6CT5HC)"
     )
     update_project_provisioning(
       xcodeproj: "YourKitchen.xcodeproj",
       profile: ENV["sigh_com.unknown-studios.YourKitchen.watchkitapp.watchkitextension_appstore_profile-path"],
       target_filter: "WatchOS Extension.*", 
+      build_configuration: "Release",
       code_signing_identity: "Apple Distribution: Markus Moltke (57VP6CT5HC)"
     )
     cocoapods

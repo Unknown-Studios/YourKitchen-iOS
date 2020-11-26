@@ -42,7 +42,7 @@
 		18227A38252FFAF1003D4872 /* RefrigeratorTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18227A36252FFAF1003D4872 /* RefrigeratorTabView.swift */; };
 		18227A39252FFAF1003D4872 /* ShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18227A37252FFAF1003D4872 /* ShoppingListView.swift */; };
 		18245F7B24896F03004F88F4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18245F7A24896F03004F88F4 /* MessageUI.framework */; };
-		18245F8324897F62004F88F4 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18245F8224897F62004F88F4 /* SwiftPackageProductDependency */; };
+		18245F8324897F62004F88F4 /* FASwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 18245F8224897F62004F88F4 /* FASwiftUI */; };
 		18245F882489805C004F88F4 /* fontawesomeeregular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18245F852489805C004F88F4 /* fontawesomeeregular.otf */; };
 		18245F892489805C004F88F4 /* fontawesome900.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18245F862489805C004F88F4 /* fontawesome900.otf */; };
 		18245F8A2489805C004F88F4 /* fontawesomebrands.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18245F872489805C004F88F4 /* fontawesomebrands.otf */; };
@@ -198,7 +198,7 @@
 		18CEF7DE249A7FDC00EBD0A8 /* RecipeTypeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7DD249A7FDC00EBD0A8 /* RecipeTypeRow.swift */; };
 		18CEF7E0249AC18400EBD0A8 /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEF7DF249AC18300EBD0A8 /* SelectCategoryView.swift */; };
 		18D7A4C724911B5F00CC9CEC /* SocialMealplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7A4C624911B5E00CC9CEC /* SocialMealplan.swift */; };
-		18D83BBB249157D70047A2C2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18D83BBA249157D70047A2C2 /* SwiftPackageProductDependency */; };
+		18D83BBB249157D70047A2C2 /* ActionOver in Frameworks */ = {isa = PBXBuildFile; productRef = 18D83BBA249157D70047A2C2 /* ActionOver */; };
 		18D83BBD249196D90047A2C2 /* ShareRefrigeratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D83BBC249196D90047A2C2 /* ShareRefrigeratorView.swift */; };
 		18E329E22484FB5C0062B931 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E329E12484FB5C0062B931 /* TestView.swift */; };
 		18E329E4248501EC0062B931 /* UserRecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E329E3248501EC0062B931 /* UserRecipeRow.swift */; };
@@ -240,7 +240,7 @@
 		18E37C0C249D66EE00D62F6E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A292B5247D3C11000FF100 /* AppConstants.swift */; };
 		18E37C0E249D684A00D62F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B6AA522451FA3900DA487E /* Assets.xcassets */; };
 		18E3DB34254104DD00CA83EB /* LikesOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E3DB33254104DD00CA83EB /* LikesOnboardingView.swift */; };
-		18E6971224BB48BF00318F1C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 18E6971124BB48BF00318F1C /* SwiftPackageProductDependency */; };
+		18E6971224BB48BF00318F1C /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 18E6971124BB48BF00318F1C /* ASCollectionView */; };
 		18E844D12496332200DC852E /* AdDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E844D02496332200DC852E /* AdDetailView.swift */; };
 		18E844D42496345E00DC852E /* SendFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E844D32496345E00DC852E /* SendFeedbackView.swift */; };
 		18E844D62496346700DC852E /* ReportIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E844D52496346700DC852E /* ReportIssueView.swift */; };
@@ -666,10 +666,10 @@
 				18245F7B24896F03004F88F4 /* MessageUI.framework in Frameworks */,
 				18859A0B248EB3B500FE9CCD /* UserNotifications.framework in Frameworks */,
 				18A292AA247C85F1000FF100 /* AuthenticationServices.framework in Frameworks */,
-				18E6971224BB48BF00318F1C /* BuildFile in Frameworks */,
+				18E6971224BB48BF00318F1C /* ASCollectionView in Frameworks */,
 				18066F4C249695BE0000D513 /* VisionKit.framework in Frameworks */,
-				18D83BBB249157D70047A2C2 /* BuildFile in Frameworks */,
-				18245F8324897F62004F88F4 /* BuildFile in Frameworks */,
+				18D83BBB249157D70047A2C2 /* ActionOver in Frameworks */,
+				18245F8324897F62004F88F4 /* FASwiftUI in Frameworks */,
 				1839D31B253E2AF3002BA68C /* StoreKit.framework in Frameworks */,
 				64F6AA2C2CD02DFE0EA76BEC /* Pods_YourKitchen.framework in Frameworks */,
 			);
@@ -1554,9 +1554,9 @@
 			);
 			name = YourKitchen;
 			packageProductDependencies = (
-				18245F8224897F62004F88F4 /* SwiftPackageProductDependency */,
-				18D83BBA249157D70047A2C2 /* SwiftPackageProductDependency */,
-				18E6971124BB48BF00318F1C /* SwiftPackageProductDependency */,
+				18245F8224897F62004F88F4 /* FASwiftUI */,
+				18D83BBA249157D70047A2C2 /* ActionOver */,
+				18E6971124BB48BF00318F1C /* ASCollectionView */,
 			);
 			productName = "iOS-Template";
 			productReference = 18B6AA492451FA3800DA487E /* YourKitchen.app */;
@@ -1630,9 +1630,9 @@
 			);
 			mainGroup = 18B6AA402451FA3800DA487E;
 			packageReferences = (
-				18245F8124897F62004F88F4 /* RemoteSwiftPackageReference */,
-				18D83BB9249157D70047A2C2 /* RemoteSwiftPackageReference */,
-				18E6971024BB48BF00318F1C /* RemoteSwiftPackageReference */,
+				18245F8124897F62004F88F4 /* XCRemoteSwiftPackageReference "FASwiftUI" */,
+				18D83BB9249157D70047A2C2 /* XCRemoteSwiftPackageReference "ActionOver" */,
+				18E6971024BB48BF00318F1C /* XCRemoteSwiftPackageReference "ASCollectionView" */,
 			);
 			productRefGroup = 18B6AA4A2451FA3800DA487E /* Products */;
 			projectDirPath = "";
@@ -2242,7 +2242,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = YourKitchenWidgetExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				INFOPLIST_FILE = YourKitchenWidget/Info.plist;
@@ -2385,7 +2385,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				IBSC_MODULE = WatchOS_Extension;
@@ -2434,7 +2434,8 @@
 			baseConfigurationReference = 707FD02427420192A636DB32 /* Pods-WatchOS Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchOS Extension/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
@@ -2614,8 +2615,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YourKitchen.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 167;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchen/Preview Content\"";
@@ -2900,7 +2901,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		18245F8124897F62004F88F4 /* RemoteSwiftPackageReference */ = {
+		18245F8124897F62004F88F4 /* XCRemoteSwiftPackageReference "FASwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mattmaddux/FASwiftUI.git";
 			requirement = {
@@ -2908,7 +2909,7 @@
 				minimumVersion = 1.0.4;
 			};
 		};
-		18D83BB9249157D70047A2C2 /* RemoteSwiftPackageReference */ = {
+		18D83BB9249157D70047A2C2 /* XCRemoteSwiftPackageReference "ActionOver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AndreaMiotto/ActionOver.git";
 			requirement = {
@@ -2916,7 +2917,7 @@
 				minimumVersion = 1.0.3;
 			};
 		};
-		18E6971024BB48BF00318F1C /* RemoteSwiftPackageReference */ = {
+		18E6971024BB48BF00318F1C /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
 			requirement = {
@@ -2927,19 +2928,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		18245F8224897F62004F88F4 /* SwiftPackageProductDependency */ = {
+		18245F8224897F62004F88F4 /* FASwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18245F8124897F62004F88F4 /* RemoteSwiftPackageReference */;
+			package = 18245F8124897F62004F88F4 /* XCRemoteSwiftPackageReference "FASwiftUI" */;
 			productName = FASwiftUI;
 		};
-		18D83BBA249157D70047A2C2 /* SwiftPackageProductDependency */ = {
+		18D83BBA249157D70047A2C2 /* ActionOver */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18D83BB9249157D70047A2C2 /* RemoteSwiftPackageReference */;
+			package = 18D83BB9249157D70047A2C2 /* XCRemoteSwiftPackageReference "ActionOver" */;
 			productName = ActionOver;
 		};
-		18E6971124BB48BF00318F1C /* SwiftPackageProductDependency */ = {
+		18E6971124BB48BF00318F1C /* ASCollectionView */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 18E6971024BB48BF00318F1C /* RemoteSwiftPackageReference */;
+			package = 18E6971024BB48BF00318F1C /* XCRemoteSwiftPackageReference "ASCollectionView" */;
 			productName = ASCollectionView;
 		};
 /* End XCSwiftPackageProductDependency section */
