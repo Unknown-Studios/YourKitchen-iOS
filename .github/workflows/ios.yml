@@ -19,7 +19,7 @@ jobs:
       - name: Bundle Install
         run: bundle install
       - name: Setup Firebase
-        run: 'echo "$GOOGLE_PLIST" > GoogleService-Info.plist; mv GoogleService-Info.plist ./YourKitchen/Misc/'
+        run: 'echo "$GOOGLE_PLIST" > GoogleService-Info.plist; mv ./GoogleService-Info.plist ./YourKitchen/Misc/'
         shell: bash
         env:
           GOOGLE_PLIST: ${{secrets.GOOGLE_PLIST}}
