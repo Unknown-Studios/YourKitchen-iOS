@@ -23,10 +23,6 @@ jobs:
         shell: bash
         env:
           GOOGLE_PLIST: ${{secrets.GOOGLE_PLIST}}
-      - name: Set Appstore Connect User
-        run: bundle exec fastlane fastlane-credentials add --password ${{ secrets.FASTLANE_PASSWORD }} --username ${{ secrets.FASTLANE_USER }} 
-        env:
-          FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
       - name: Fastlane Setup
         run: bundle exec fastlane setup
         env:
@@ -36,9 +32,9 @@ jobs:
         run: bundle exec fastlane github_test
         env:
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }} # Just for upload (To be sure)
+          MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
           CI_KEYCHAIN_NAME: ${{ secrets.CI_KEYCHAIN_NAME }}
           CI_KEYCHAIN_PASSWORD: ${{ secrets.CI_KEYCHAIN_PASSWORD }}
           GIT_ACCESS: ${{ secrets.GIT_ACCESS }}
-          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: ${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }} # Just for upload (To be sure)

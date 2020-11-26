@@ -75,7 +75,10 @@ platform :ios do
       workspace: "YourKitchen.xcworkspace",
     )
     upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
-    pilot(ipa: './build/YourKitchen.ipa', skip_waiting_for_build_processing: true)
+    pilot(
+      ipa: './build/YourKitchen.ipa', 
+      skip_waiting_for_build_processing: true
+    )
   end
 
   desc "Take screenshots of the app"
