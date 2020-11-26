@@ -18,7 +18,7 @@ def build_release
   cocoapods()
   if is_ci
     create_keychain(
-      name: ENV["CI_KEYCHAIN_USER"],
+      name: ENV["CI_KEYCHAIN_NAME"],
       password: ENV["CI_KEYCHAIN_PASSWORD"],
       default_keychain: true,
       unlock: true,
@@ -28,12 +28,12 @@ def build_release
     match(
       type: "appstore",
       readonly: true,
-      keychain_name: ENV["CI_KEYCHAIN_USER"],
+      keychain_name: ENV["CI_KEYCHAIN_NAME"],
       keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
     )
     sh("security list-keychains -d user")
     sh("security default-keychain -d user")
-    sh("security find-identity -v -p codesigning " + ENV["CI_KEYCHAIN_USER"])
+    sh("security find-identity -v -p codesigning " + ENV["CI_KEYCHAIN_NAME"])
     disable_automatic_code_signing(
       path: "YourKitchen.xcodeproj",
       team_id: "57VP6CT5HC"
