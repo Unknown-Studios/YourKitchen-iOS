@@ -31,11 +31,15 @@ def build_release
       keychain_name: ENV["CI_KEYCHAIN_NAME"],
       keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
     )
+    sigh(
+      username: ENV["FASTLANE_USER"]
+    )
+
+    # set the project provisoning profile UUID to the mobile provisioning profile obtained from sigh
     update_project_provisioning(
-      xcodeproj: "YourKitchen.xcodeproj",
-      target_filter: "YourKitchen",
-      profile: ENV["sigh_com.unknown-studios.YourKitchen_appstore_profile-path"],
-      code_signing_identity: "Apple Distribution: Markus Moltke (57VP6CT5HC)",
+        xcodeproj: "YourKitchen.xcodeproj",
+        target_filter: '.*',
+        profile: "./AppStore_com.unknown-studios.YourKitchen.mobileprovision"
     )
   else
     match(
