@@ -16,9 +16,9 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
-### ios appstore_testflight
+### ios setup
 ```
-fastlane ios appstore_testflight
+fastlane ios setup
 ```
 
 ### ios github_test
