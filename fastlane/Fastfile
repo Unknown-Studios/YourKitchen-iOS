@@ -47,7 +47,7 @@ platform :ios do
       target_filter: ".*", 
       code_signing_identity: "Apple Distribution: Markus Moltke (57VP6CT5HC)"
     )
-    
+    cocoapods
     build_app(
       scheme: "YourKitchen",
       workspace: "YourKitchen.xcworkspace",
