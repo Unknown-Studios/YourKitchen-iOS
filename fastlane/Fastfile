@@ -36,6 +36,7 @@ platform :ios do
     match(
       type: "appstore",
       readonly: is_ci,
+      git_basic_authorization: ENV["GIT_ACCESS"],
       keychain_name: ENV["CI_KEYCHAIN_NAME"],
       keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
     )
