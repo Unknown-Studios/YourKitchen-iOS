@@ -2241,9 +2241,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = YourKitchenWidgetExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 162;
+				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				INFOPLIST_FILE = YourKitchenWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -2255,7 +2255,8 @@
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.YKWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "dc2b6966-5a39-43c6-98d7-0b3c36f2eda7";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.YKWidget";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2269,10 +2270,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = YourKitchenWidgetExtension.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Markus Moltke (57VP6CT5HC)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "iPhone Distribution: Markus Moltke (57VP6CT5HC)";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 162;
+				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				INFOPLIST_FILE = YourKitchenWidget/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -2284,8 +2285,8 @@
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.YKWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
+				PROVISIONING_PROFILE = "dc2b6966-5a39-43c6-98d7-0b3c36f2eda7";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.YKWidget";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2383,15 +2384,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 162;
+				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				IBSC_MODULE = WatchOS_Extension;
 				INFOPLIST_FILE = WatchOS/Info.plist;
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0dfd58a8-6651-46d8-8b22-62687f4961e1";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.watchkitapp";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2406,18 +2409,18 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WatchOS/WatchOSRelease.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Markus Moltke (57VP6CT5HC)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "iPhone Distribution: Markus Moltke (57VP6CT5HC)";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 162;
+				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				IBSC_MODULE = WatchOS_Extension;
 				INFOPLIST_FILE = WatchOS/Info.plist;
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
+				PROVISIONING_PROFILE = "0dfd58a8-6651-46d8-8b22-62687f4961e1";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.watchkitapp";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2432,7 +2435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 162;
+				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchOS Extension/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				ENABLE_PREVIEWS = YES;
@@ -2445,6 +2448,8 @@
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "2e1029da-5d34-4cbf-90cb-9d7c0d84ba3a";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.watchkitapp.watchkitextension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2459,9 +2464,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "WatchOS Extension/WatchOS ExtensionRelease.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Markus Moltke (57VP6CT5HC)";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 162;
+				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchOS Extension/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				ENABLE_PREVIEWS = YES;
@@ -2474,8 +2479,8 @@
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
+				PROVISIONING_PROFILE = "2e1029da-5d34-4cbf-90cb-9d7c0d84ba3a";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.watchkitapp.watchkitextension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2609,9 +2614,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YourKitchen.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 162;
+				CURRENT_PROJECT_VERSION = 167;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchen/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
@@ -2669,7 +2674,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "YourKitchen/Misc/YourKitchen-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -2685,10 +2691,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YourKitchen.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Markus Moltke (57VP6CT5HC)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "iPhone Distribution: Markus Moltke (57VP6CT5HC)";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 162;
+				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchen/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				ENABLE_PREVIEWS = YES;
@@ -2765,7 +2771,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_ENTITLEMENTS = YourKitchenTV/YourKitchenTV.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 162;
+				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchenTV/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				ENABLE_PREVIEWS = YES;
@@ -2777,6 +2783,8 @@
 				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchenTV";
 				PRODUCT_NAME = YourKitchen;
+				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -2791,9 +2799,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_ENTITLEMENTS = YourKitchenTV/YourKitchenTV.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Markus Moltke (57VP6CT5HC)";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 162;
+				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchenTV/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				ENABLE_PREVIEWS = YES;
