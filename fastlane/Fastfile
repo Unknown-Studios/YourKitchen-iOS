@@ -34,14 +34,10 @@ def build_release
     sh("security list-keychains -d user")
     sh("security default-keychain -d user")
     sh("security find-identity -v -p codesigning " + ENV["CI_KEYCHAIN_NAME"])
-    disable_automatic_code_signing(
-      path: "YourKitchen.xcodeproj",
-      team_id: "57VP6CT5HC"
-    )
     update_project_provisioning(
       xcodeproj: "YourKitchen.xcodeproj",
       target_filter: "YourKitchen",
-      profile:ENV["sigh_com.unknown-studios.YourKitchen_development_appstore_profile-path"],
+      profile: ENV["sigh_com.unknown-studios.YourKitchen_appstore_profile-path"],
       code_signing_identity: "Apple Distribution: Markus Moltke (57VP6CT5HC)",
     )
   else
