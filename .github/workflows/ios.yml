@@ -22,8 +22,13 @@ jobs:
         run: bundle exec fastlane fastlane-credentials add --password ${{ secrets.FASTLANE_PASSWORD }} --username ${{ secrets.FASTLANE_USER }} 
         env:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
-      - name: Fastlane Beta CI
-        run: bundle exec fastlane appstore_testflight
+      - name: Fastlane Setup
+        run: bundle exec fastlane setup
+        env:
+          CI_KEYCHAIN_NAME: ${{ secrets.CI_KEYCHAIN_NAME }}
+          CI_KEYCHAIN_PASSWORD: ${{ secrets.CI_KEYCHAIN_PASSWORD }}
+      - name: Fastlane Deploy to Testflight
+        run: bundle exec fastlane github_test
         env:
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}

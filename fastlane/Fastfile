@@ -14,8 +14,13 @@ update_fastlane
 
 default_platform(:ios)
 
-def build_release
-  if is_ci
+platform :ios do
+
+  lane :setup do
+    setup_project
+  end
+  
+  private_lane :setup_project do
     create_keychain(
       name: ENV["CI_KEYCHAIN_NAME"],
       password: ENV["CI_KEYCHAIN_PASSWORD"],
@@ -24,73 +29,29 @@ def build_release
       timeout: 3600,
       lock_when_sleeps: false
     )
-    match(
-      type: "appstore",
-      git_basic_authorization: ENV["GIT_ACCESS"],
-      readonly: true,
-      keychain_name: ENV["CI_KEYCHAIN_NAME"],
-      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
-    )
-    sigh(
-      username: ENV["FASTLANE_USER"]
-    )
-
-    # set the project provisoning profile UUID to the mobile provisioning profile obtained from sigh
-    update_project_provisioning(
-        xcodeproj: "YourKitchen.xcodeproj",
-        target_filter: '.*',
-        profile: "./AppStore_com.unknown-studios.YourKitchen.mobileprovision"
-    )
-  else
-    match(
-      type: "appstore",
-      readonly: true
-    )
-  end
-  cocoapods
-  gym(
-    workspace: "YourKitchen.xcworkspace",
-    scheme: "YourKitchen",
-    export_method: "app-store",
-  )
-end
-
-platform :ios do
-
-  lane :appstore_testflight do
-    build_release
-    pilot
   end
 
   lane :github_test do
     increment_build_number
-    if is_ci 
-      create_keychain(
-        name: ENV["CI_KEYCHAIN_NAME"],
-        password: ENV["CI_KEYCHAIN_PASSWORD"],
-        default_keychain: true,
-        unlock: true,
-        timeout: 3600,
-        lock_when_sleeps: false
-      )
-    end
     match(
-      type: "development", 
-      git_basic_authorization: ENV["GIT_ACCESS"],
-      readonly: is_ci, 
-      keychain_name: ENV["CI_KEYCHAIN_NAME"], 
+      type: "appstore",
+      readonly: is_ci,
+      keychain_name: ENV["CI_KEYCHAIN_NAME"],
       keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
     )
-    match(
-      type: "appstore", 
-      git_basic_authorization: ENV["GIT_ACCESS"],
-      readonly: is_ci, 
-      keychain_name: ENV["CI_KEYCHAIN_NAME"], 
-      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
+    
+    update_project_provisioning(
+      xcodeproj: "YourKitchen.xcodeproj",
+      profile: ENV["sigh_com.unknown-studios.YourKitchen_appstore_profile-path"],
+    target_filter: "YourKitchen", 
+      build_configuration: "Release",
+      code_signing_identity: "iPhone Distribution: Markus Moltke (57VP6CT5HC)"
     )
-
-    cocoapods
-    build_app(workspace: "YourKitchen.xcworkspace", scheme: "YourKitchen")
+    
+    build_app(
+      scheme: "YourKitchen",
+      workspace: "YourKitchen.xcworkspace",
+    )
     upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
     pilot(ipa: './build/YourKitchen.ipa', skip_waiting_for_build_processing: true)
   end
