@@ -76,6 +76,7 @@ platform :ios do
     )
     upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
     upload_to_testflight(
+      verbose: true,
       ipa: './build/YourKitchen.ipa', 
       skip_waiting_for_build_processing: is_ci,
       username: ENV["FASTLANE_USER"],
