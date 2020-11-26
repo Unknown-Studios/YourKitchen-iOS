@@ -23,7 +23,7 @@ jobs:
         env:
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
       - name: Fastlane Beta CI
-        run: bundle exec fastlane github_test
+        run: bundle exec fastlane appstore_testflight
         env:
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}

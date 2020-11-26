@@ -10,12 +10,60 @@
 #     https://docs.fastlane.tools/plugins/available-plugins
 #
 
-# Uncomment the line if you want fastlane to automatically update itself
 update_fastlane
 
 default_platform(:ios)
 
+def build_release
+  cocoapods()
+  if is_ci
+    create_keychain(
+      name: ENV["CI_KEYCHAIN_USER"],
+      password: ENV["CI_KEYCHAIN_PASSWORD"],
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: false
+    )
+    match(
+      type: "appstore",
+      readonly: true,
+      keychain_name: ENV["CI_KEYCHAIN_USER"],
+      keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
+    )
+    sh("security list-keychains -d user")
+    sh("security default-keychain -d user")
+    sh("security find-identity -v -p codesigning " + ENV["CI_KEYCHAIN_USER"])
+    disable_automatic_code_signing(
+      path: "YourKitchen.xcodeproj",
+      team_id: "57VP6CT5HC"
+    )
+    update_project_provisioning(
+      xcodeproj: "YourKitchen.xcodeproj",
+      target_filter: "YourKitchen",
+      profile:ENV["sigh_com.unknown-studios.YourKitchen_development_appstore_profile-path"],
+      code_signing_identity: "Apple Distribution: Markus Moltke (57VP6CT5HC)",
+    )
+  else
+    match(
+      type: "appstore",
+      readonly: true
+    )
+  end
+  gym(
+    workspace: "YourKitchen.xcworkspace",
+    scheme: "YourKitchen",
+    export_method: "app-store",
+  )
+end
+
 platform :ios do
+
+  lane :appstore_testflight do
+    build_release
+    pilot
+  end
+
   lane :github_test do
     increment_build_number
     if is_ci 
@@ -42,26 +90,11 @@ platform :ios do
       keychain_name: ENV["CI_KEYCHAIN_NAME"], 
       keychain_password: ENV["CI_KEYCHAIN_PASSWORD"]
     )
-    #match(
-    #  app_identifier: "com.unknown-studios.YourKitchen",
-    #  git_url: ENV["GIT_REPO_URL"],
-    #  git_basic_authorization: ENV["GIT_ACCESS"],
-    #  type: "appstore",
-    #  username: ENV["FASTLANE_USER"],
-    #  team_id: ENV["DEVELOPER_TEAM_ID"],
-    #  keychain_name: ENV["CI_KEYCHAIN_NAME"],
-    #  keychain_password: ENV["CI_KEYCHAIN_PASSWORD"],
-    #  readonly: true
-    #)
 
     cocoapods
-    #gym(
-    #  silent: true,
-    #  suppress_xcode_output: true
-    #)
     build_app(workspace: "YourKitchen.xcworkspace", scheme: "YourKitchen")
     upload_symbols_to_crashlytics(dsym_path: "./build/YourKitchen.app.dSYM.zip")
-    pilot(ipa: './build/YourKitchen.ipa', skip_waiting_for_build_processing: true, username: ENV["FASTLANE_USER"])
+    pilot(ipa: './build/YourKitchen.ipa', skip_waiting_for_build_processing: true)
   end
 
   desc "Take screenshots of the app"
