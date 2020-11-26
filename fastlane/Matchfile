@@ -7,7 +7,4 @@ type("appstore") # The default type, can be: appstore, adhoc, enterprise or deve
 app_identifier(["com.unknown-studios.YourKitchen", "com.unknown-studios.YourKitchen.YKWidget", "com.unknown-studios.YourKitchen.watchkitapp", "com.unknown-studios.YourKitchen.watchkitapp.watchkitextension"])
 username("markus@unknown-studios.com") # Your Apple Developer Portal username
 
-# For all available options run `fastlane match --help`
-# Remove the # in the beginning of the line to enable the other options
-
 # The docs are available on https://docs.fastlane.tools/actions/match
