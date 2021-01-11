@@ -200,6 +200,8 @@
 		18D7A4C724911B5F00CC9CEC /* SocialMealplan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7A4C624911B5E00CC9CEC /* SocialMealplan.swift */; };
 		18D83BBB249157D70047A2C2 /* ActionOver in Frameworks */ = {isa = PBXBuildFile; productRef = 18D83BBA249157D70047A2C2 /* ActionOver */; };
 		18D83BBD249196D90047A2C2 /* ShareRefrigeratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D83BBC249196D90047A2C2 /* ShareRefrigeratorView.swift */; };
+		18DBD1742570720F0005CD41 /* NativeTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD1732570720F0005CD41 /* NativeTemplate.swift */; };
+		18DBD17D2570726E0005CD41 /* NativeTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DBD17C2570726E0005CD41 /* NativeTemplate.xib */; };
 		18E329E22484FB5C0062B931 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E329E12484FB5C0062B931 /* TestView.swift */; };
 		18E329E4248501EC0062B931 /* UserRecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E329E3248501EC0062B931 /* UserRecipeRow.swift */; };
 		18E329E6248508ED0062B931 /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E329E5248508ED0062B931 /* RecipeRow.swift */; };
@@ -567,9 +569,10 @@
 		18C8BB79247DE3A900D61953 /* AddRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeView.swift; sourceTree = "<group>"; };
 		18CEF7DD249A7FDC00EBD0A8 /* RecipeTypeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTypeRow.swift; sourceTree = "<group>"; };
 		18CEF7DF249AC18300EBD0A8 /* SelectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryView.swift; sourceTree = "<group>"; };
-		18D169DB24533C720098C584 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = SOURCE_ROOT; };
 		18D7A4C624911B5E00CC9CEC /* SocialMealplan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMealplan.swift; sourceTree = "<group>"; };
 		18D83BBC249196D90047A2C2 /* ShareRefrigeratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareRefrigeratorView.swift; sourceTree = "<group>"; };
+		18DBD1732570720F0005CD41 /* NativeTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeTemplate.swift; sourceTree = "<group>"; };
+		18DBD17C2570726E0005CD41 /* NativeTemplate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeTemplate.xib; sourceTree = "<group>"; };
 		18E329E12484FB5C0062B931 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		18E329E3248501EC0062B931 /* UserRecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeRow.swift; sourceTree = "<group>"; };
 		18E329E5248508ED0062B931 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
@@ -866,7 +869,6 @@
 				18B6AA572451FA3900DA487E /* LaunchScreen.storyboard */,
 				18B6AA4C2451FA3800DA487E /* AppDelegate.swift */,
 				18A292A6247C8402000FF100 /* GoogleService-Info.plist */,
-				18D169DB24533C720098C584 /* config.json */,
 				18B6AA5A2451FA3900DA487E /* Info.plist */,
 				188AE6352493B58D00573D1C /* YourKitchen-Bridging-Header.h */,
 			);
@@ -959,6 +961,8 @@
 				188AE62F24939FD800573D1C /* NativeAdsViewController.swift */,
 				188AE6312493A42E00573D1C /* YKNativeAdView.swift */,
 				188AE6442493F10800573D1C /* GADBannerViewController.swift */,
+				18DBD1732570720F0005CD41 /* NativeTemplate.swift */,
+				18DBD17C2570726E0005CD41 /* NativeTemplate.xib */,
 			);
 			path = Advertisement;
 			sourceTree = "<group>";
@@ -1696,6 +1700,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DBD17D2570726E0005CD41 /* NativeTemplate.xib in Resources */,
 				18245F892489805C004F88F4 /* fontawesome900.otf in Resources */,
 				18B6AA592451FA3900DA487E /* LaunchScreen.storyboard in Resources */,
 				18245F882489805C004F88F4 /* fontawesomeeregular.otf in Resources */,
@@ -1993,6 +1998,7 @@
 				186248482487C3C600A72FF5 /* HighPriorityButtonStyle.swift in Sources */,
 				183F2FED2480137900285AD3 /* YKUser.swift in Sources */,
 				181ABC2824A003AA00CEA80A /* RecipeDetailView.swift in Sources */,
+				18DBD1742570720F0005CD41 /* NativeTemplate.swift in Sources */,
 				18700AD324900F26008794EF /* SelectUserView.swift in Sources */,
 				18A292B6247D3C11000FF100 /* AppConstants.swift in Sources */,
 				18066F4F2496966E0000D513 /* ScannerView.swift in Sources */,
@@ -2241,8 +2247,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = YourKitchenWidgetExtension.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				INFOPLIST_FILE = YourKitchenWidget/Info.plist;
@@ -2255,8 +2261,7 @@
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.YKWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dc2b6966-5a39-43c6-98d7-0b3c36f2eda7";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.YKWidget";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2285,7 +2290,6 @@
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.YKWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "dc2b6966-5a39-43c6-98d7-0b3c36f2eda7";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.YKWidget";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2316,6 +2320,8 @@
 		18289C8D248DB5ED006332C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				INFOPLIST_FILE = Snapshots/Info.plist;
@@ -2327,8 +2333,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.Snapshots";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = YourKitchen;
@@ -2359,6 +2365,7 @@
 		184CA4AB24A2C166005E11F2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				INFOPLIST_FILE = SnapshotsTV/Info.plist;
@@ -2369,8 +2376,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.SnapshotsTV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -2384,8 +2390,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
 				IBSC_MODULE = WatchOS_Extension;
@@ -2393,8 +2399,7 @@
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0dfd58a8-6651-46d8-8b22-62687f4961e1";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.watchkitapp";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2419,7 +2424,6 @@
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0dfd58a8-6651-46d8-8b22-62687f4961e1";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.watchkitapp";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2434,8 +2438,8 @@
 			baseConfigurationReference = 707FD02427420192A636DB32 /* Pods-WatchOS Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchOS Extension/Misc/Preview Content\"";
 				DEVELOPMENT_TEAM = 57VP6CT5HC;
@@ -2449,8 +2453,7 @@
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "2e1029da-5d34-4cbf-90cb-9d7c0d84ba3a";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.watchkitapp.watchkitextension";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2480,7 +2483,6 @@
 				MARKETING_VERSION = 0.6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "2e1029da-5d34-4cbf-90cb-9d7c0d84ba3a";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen.watchkitapp.watchkitextension";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2615,8 +2617,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YourKitchen.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 167;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchen/Preview Content\"";
@@ -2672,11 +2673,10 @@
 					"\"UIKit\"",
 					"-framework",
 					"\"nanopb\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "YourKitchen/Misc/YourKitchen-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -2692,8 +2692,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YourKitchen.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Distribution: Markus Moltke (57VP6CT5HC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchen/Preview Content\"";
@@ -2749,13 +2748,12 @@
 					"\"UIKit\"",
 					"-framework",
 					"\"nanopb\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchen";
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = "maccatalyst.com.unknown-studios.YourKitchen";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "YourKitchen iOS Distribution Mac";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.unknown-studios.YourKitchen";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "YourKitchen/Misc/YourKitchen-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -2771,6 +2769,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				CODE_SIGN_ENTITLEMENTS = YourKitchenTV/YourKitchenTV.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 167;
 				DEVELOPMENT_ASSET_PATHS = "\"YourKitchenTV/Preview Content\"";
@@ -2784,8 +2783,7 @@
 				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchenTV";
 				PRODUCT_NAME = YourKitchen;
-				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -2814,8 +2812,7 @@
 				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unknown-studios.YourKitchenTV";
 				PRODUCT_NAME = YourKitchen;
-				PROVISIONING_PROFILE = "9c71c654-517d-4cbc-9e1f-c6818e57cd37";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.unknown-studios.YourKitchen";
+				PROVISIONING_PROFILE_SPECIFIER = "YourKitchenTV Distribution";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;

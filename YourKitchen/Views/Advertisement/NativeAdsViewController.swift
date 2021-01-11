@@ -25,6 +25,12 @@ final class NativeAdsViewController: NSObject, UIViewControllerRepresentable {
     func makeUIViewController(context _: UIViewControllerRepresentableContext<NativeAdsViewController>) -> UIViewController {
         let templateView = GADTMediumTemplateView()
         self.templateView = templateView
+        
+        templateView.layer.cornerRadius = 10
+        templateView.clipsToBounds = true
+        templateView.frame = CGRect(x: 0, y: 0, width: 325, height: 325)
+        //templateView.callToActionView?.isHidden = true
+        
 
         let viewController = UIViewController()
 
@@ -45,11 +51,11 @@ final class NativeAdsViewController: NSObject, UIViewControllerRepresentable {
         self.adLoader = adLoader
 
         let request = GADRequest()
-        let extras = GADExtras()
         if UserDefaults.standard.bool(forKey: "adConsent") {
+            let extras = GADExtras()
             extras.additionalParameters = ["npa": "1"]
+            request.register(extras)
         }
-        request.register(extras)
         adLoader.load(request)
 
         return viewController
@@ -65,6 +71,29 @@ extension NativeAdsViewController: GADUnifiedNativeAdLoaderDelegate {
     }
 
     func adLoader(_: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
-        print("Found error while loading admob: " + error.localizedDescription)
+        // Gets the domain from which the error came.
+        let errorDomain = error.domain
+        // Gets the error code. See
+        // https://developers.google.com/admob/ios/api/reference/Enums/GADErrorCode
+        // for a list of possible codes.
+        let errorCode = error.code
+        // Gets an error message.
+        // For example "Account not approved yet". See
+        // https://support.google.com/admob/answer/9905175 for explanations of
+        // common errors.
+        let errorMessage = error.localizedDescription
+        // Gets additional response information about the request. See
+        // https://developers.google.com/admob/ios/response-info for more information.
+        let responseInfo = error.userInfo[GADErrorUserInfoKeyResponseInfo] as? GADResponseInfo
+        // Gets the underlyingError, if available.
+        let underlyingError = error.userInfo[NSUnderlyingErrorKey] as? Error
+        if let responseInfo = responseInfo {
+            print("Received error with domain: \(errorDomain), code: \(errorCode),"
+              + "message: \(errorMessage), responseInfo: \(responseInfo),"
+              + "underLyingError: \(underlyingError?.localizedDescription ?? "nil")")
+        }
+        #if !DEBUG
+            templateView?.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        #endif
     }
 }
