@@ -38,3 +38,4 @@ jobs:
           CI_KEYCHAIN_NAME: ${{ secrets.CI_KEYCHAIN_NAME }}
           CI_KEYCHAIN_PASSWORD: ${{ secrets.CI_KEYCHAIN_PASSWORD }}
           GIT_ACCESS: ${{ secrets.GIT_ACCESS }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
