@@ -19,6 +19,7 @@ import GoogleSignIn
 
 // Advertisement
 import GoogleMobileAds
+import AdSupport
 
 // Premium
 import SwiftyStoreKit
@@ -59,14 +60,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
 
         FirebaseApp.configure()
+        
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
 
-        #if DEBUG
-            GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["20c19472f846ae6ffbbb3b88c51ec26a"]
-        #endif
-        GADMobileAds.sharedInstance().start { _ in
-            print("Started AdMob")
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["20c19472f846ae6ffbbb3b88c51ec26a", "0FB58F97-7682-40D3-AA1D-600188123FC8"]
+        GADMobileAds.sharedInstance().start { status in
+            print("Started AdMob: " + status.debugDescription)
+            for stat in status.adapterStatusesByClassName {
+                print(stat.key + ": " + stat.value.description)
+            }
         }
+        
+        print(ASIdentifierManager.shared().advertisingIdentifier)
 
         if CommandLine.arguments.contains("-uiTesting") {
             UserDefaults.standard.set(true, forKey: "privacyConsent")

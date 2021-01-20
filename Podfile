@@ -17,7 +17,7 @@ target 'YourKitchen' do
   pod 'SwiftUIRefresh'
 
   # Crash analytics and regular analytics
-  pod 'Firebase/Analytics', '~> 7.1.0'
+  pod 'Firebase/Analytics', '~> 7.3'
   pod 'Firebase/Crashlytics'
 
   # Kingfisher
@@ -26,7 +26,7 @@ target 'YourKitchen' do
 
   # Firebase
   pod 'Firebase/Firestore'
-  pod 'FirebaseFirestoreSwift', '~> 7.1.0-beta'
+  pod 'FirebaseFirestoreSwift', '~> 7.3.0-beta'
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
   # pod 'GoogleMLKit/Translate'
@@ -63,7 +63,7 @@ target 'YourKitchenTV' do
   # Firebase
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'FirebaseFirestoreSwift', '~> 7.1.0-beta'
+  pod 'FirebaseFirestoreSwift', '~> 7.3.0-beta'
   pod 'Firebase/Storage'
 
 end
