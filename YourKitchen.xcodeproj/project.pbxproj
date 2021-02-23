@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F4ADA2D90875C1EEDAB1BC4 /* Pods_WatchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B006F54A9E45DA7A1642DF /* Pods_WatchOS_Extension.framework */; };
 		1804E4D524B886DB00B04AB8 /* SpotlightHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804E4D424B886DB00B04AB8 /* SpotlightHelper.swift */; };
 		18066F4C249695BE0000D513 /* VisionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18066F4B249695BE0000D513 /* VisionKit.framework */; };
 		18066F4F2496966E0000D513 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18066F4E2496966E0000D513 /* ScannerView.swift */; };
@@ -270,11 +269,12 @@
 		18FEF920248A881F00580DE1 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEF91F248A881F00580DE1 /* WebViewModel.swift */; };
 		18FEF922248A888600580DE1 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FEF921248A888600580DE1 /* WebView.swift */; };
 		18FEF924248A954B00580DE1 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18FEF923248A954B00580DE1 /* Roboto-Medium.ttf */; };
-		64F6AA2C2CD02DFE0EA76BEC /* Pods_YourKitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5C5FC19564B939F26CEB4E /* Pods_YourKitchen.framework */; };
-		7FA7211475738EE6B33433B1 /* Pods_YourKitchenTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5ED75863B8C093B3FC2F65 /* Pods_YourKitchenTV.framework */; };
 		9628336C3E6F8911D636AFAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EC0CB652EBCF121B266F8A3 /* InfoPlist.strings */; };
-		AC33805567503B7E674E925C /* Pods_YourKitchenWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 467009618158836A725CFC6C /* Pods_YourKitchenWidgetExtension.framework */; };
+		B25C7599E77944D00E70C5E0 /* Pods_YourKitchenWidgetExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AB637E40868ED77FCBD5B0 /* Pods_YourKitchenWidgetExtension.framework */; };
 		C859494FF0A2BF6A12E80AC4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF1C7532B39859D274BB4408 /* Localizable.strings */; };
+		DE95D329E6AA83605C710C55 /* Pods_WatchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250F8EFA24B3082C2CAD5306 /* Pods_WatchOS_Extension.framework */; };
+		EE7CFD807C976CACD1B251ED /* Pods_YourKitchenTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF8819955A567C43ABF7D90 /* Pods_YourKitchenTV.framework */; };
+		F7C824DCC9794736A738B57B /* Pods_YourKitchen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C342EB94C1D230689AAC947 /* Pods_YourKitchen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -362,8 +362,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		074E5807F067BE59C3A6C6E5 /* Pods-YourKitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchen.release.xcconfig"; path = "Target Support Files/Pods-YourKitchen/Pods-YourKitchen.release.xcconfig"; sourceTree = "<group>"; };
-		161502E5250C46B96BA5C270 /* Pods-YourKitchenWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchenWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-YourKitchenWidgetExtension/Pods-YourKitchenWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		05AB637E40868ED77FCBD5B0 /* Pods_YourKitchenWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourKitchenWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1804E4D424B886DB00B04AB8 /* SpotlightHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightHelper.swift; sourceTree = "<group>"; };
 		18066F4B249695BE0000D513 /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = System/Library/Frameworks/VisionKit.framework; sourceTree = SDKROOT; };
 		18066F4E2496966E0000D513 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -613,18 +612,19 @@
 		18FEF91F248A881F00580DE1 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 		18FEF921248A888600580DE1 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		18FEF923248A954B00580DE1 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		24AC3648C6DC0295428E7D58 /* Pods-YourKitchenTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchenTV.debug.xcconfig"; path = "Target Support Files/Pods-YourKitchenTV/Pods-YourKitchenTV.debug.xcconfig"; sourceTree = "<group>"; };
+		1C6D2DB2CF10F88744F2B7F9 /* Pods-WatchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchOS Extension.release.xcconfig"; path = "Target Support Files/Pods-WatchOS Extension/Pods-WatchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
+		250F8EFA24B3082C2CAD5306 /* Pods_WatchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EF8819955A567C43ABF7D90 /* Pods_YourKitchenTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourKitchenTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F14D9C9092C3B54751F4171 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		39D08DB6DEEA6FCD81F228E2 /* Pods-YourKitchenTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchenTV.release.xcconfig"; path = "Target Support Files/Pods-YourKitchenTV/Pods-YourKitchenTV.release.xcconfig"; sourceTree = "<group>"; };
-		3D5C5FC19564B939F26CEB4E /* Pods_YourKitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourKitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		467009618158836A725CFC6C /* Pods_YourKitchenWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourKitchenWidgetExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57CBDD973DFAAB61D5E2EE65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		707FD02427420192A636DB32 /* Pods-WatchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchOS Extension.debug.xcconfig"; path = "Target Support Files/Pods-WatchOS Extension/Pods-WatchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		859767B7CCD0B393B2D8EDD6 /* Pods-WatchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchOS Extension.release.xcconfig"; path = "Target Support Files/Pods-WatchOS Extension/Pods-WatchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
-		95B006F54A9E45DA7A1642DF /* Pods_WatchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E5ED75863B8C093B3FC2F65 /* Pods_YourKitchenTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourKitchenTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3CA8A70CEAACBBF1D192BB6 /* Pods-YourKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchen.debug.xcconfig"; path = "Target Support Files/Pods-YourKitchen/Pods-YourKitchen.debug.xcconfig"; sourceTree = "<group>"; };
-		CE361E9C5C23C0EE6D89D874 /* Pods-YourKitchenWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchenWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-YourKitchenWidgetExtension/Pods-YourKitchenWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
+		71CF5C314F1EDFD0C368B6F2 /* Pods-YourKitchenTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchenTV.debug.xcconfig"; path = "Target Support Files/Pods-YourKitchenTV/Pods-YourKitchenTV.debug.xcconfig"; sourceTree = "<group>"; };
+		7C342EB94C1D230689AAC947 /* Pods_YourKitchen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YourKitchen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B0372C1B430CC7A8221368 /* Pods-YourKitchenWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchenWidgetExtension.debug.xcconfig"; path = "Target Support Files/Pods-YourKitchenWidgetExtension/Pods-YourKitchenWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		B8F0A10BB081CCAFB161FF80 /* Pods-WatchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchOS Extension.debug.xcconfig"; path = "Target Support Files/Pods-WatchOS Extension/Pods-WatchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		C2CC7033745E23422067ADA4 /* Pods-YourKitchen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchen.debug.xcconfig"; path = "Target Support Files/Pods-YourKitchen/Pods-YourKitchen.debug.xcconfig"; sourceTree = "<group>"; };
+		E2DD8498C40C48AD158AD946 /* Pods-YourKitchen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchen.release.xcconfig"; path = "Target Support Files/Pods-YourKitchen/Pods-YourKitchen.release.xcconfig"; sourceTree = "<group>"; };
+		E99CC1EF0563FA4FCC549BC2 /* Pods-YourKitchenTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchenTV.release.xcconfig"; path = "Target Support Files/Pods-YourKitchenTV/Pods-YourKitchenTV.release.xcconfig"; sourceTree = "<group>"; };
+		F90B303943CED5E687C03B00 /* Pods-YourKitchenWidgetExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YourKitchenWidgetExtension.release.xcconfig"; path = "Target Support Files/Pods-YourKitchenWidgetExtension/Pods-YourKitchenWidgetExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -634,7 +634,7 @@
 			files = (
 				18227924252FF77D003D4872 /* SwiftUI.framework in Frameworks */,
 				18227922252FF77D003D4872 /* WidgetKit.framework in Frameworks */,
-				AC33805567503B7E674E925C /* Pods_YourKitchenWidgetExtension.framework in Frameworks */,
+				B25C7599E77944D00E70C5E0 /* Pods_YourKitchenWidgetExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,7 +656,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F4ADA2D90875C1EEDAB1BC4 /* Pods_WatchOS_Extension.framework in Frameworks */,
+				DE95D329E6AA83605C710C55 /* Pods_WatchOS_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,7 +674,7 @@
 				18D83BBB249157D70047A2C2 /* ActionOver in Frameworks */,
 				18245F8324897F62004F88F4 /* FASwiftUI in Frameworks */,
 				1839D31B253E2AF3002BA68C /* StoreKit.framework in Frameworks */,
-				64F6AA2C2CD02DFE0EA76BEC /* Pods_YourKitchen.framework in Frameworks */,
+				F7C824DCC9794736A738B57B /* Pods_YourKitchen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +682,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FA7211475738EE6B33433B1 /* Pods_YourKitchenTV.framework in Frameworks */,
+				EE7CFD807C976CACD1B251ED /* Pods_YourKitchenTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,14 +699,14 @@
 		0C201AFF7282C3FF7EA45BBB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				707FD02427420192A636DB32 /* Pods-WatchOS Extension.debug.xcconfig */,
-				859767B7CCD0B393B2D8EDD6 /* Pods-WatchOS Extension.release.xcconfig */,
-				C3CA8A70CEAACBBF1D192BB6 /* Pods-YourKitchen.debug.xcconfig */,
-				074E5807F067BE59C3A6C6E5 /* Pods-YourKitchen.release.xcconfig */,
-				24AC3648C6DC0295428E7D58 /* Pods-YourKitchenTV.debug.xcconfig */,
-				39D08DB6DEEA6FCD81F228E2 /* Pods-YourKitchenTV.release.xcconfig */,
-				161502E5250C46B96BA5C270 /* Pods-YourKitchenWidgetExtension.debug.xcconfig */,
-				CE361E9C5C23C0EE6D89D874 /* Pods-YourKitchenWidgetExtension.release.xcconfig */,
+				B8F0A10BB081CCAFB161FF80 /* Pods-WatchOS Extension.debug.xcconfig */,
+				1C6D2DB2CF10F88744F2B7F9 /* Pods-WatchOS Extension.release.xcconfig */,
+				C2CC7033745E23422067ADA4 /* Pods-YourKitchen.debug.xcconfig */,
+				E2DD8498C40C48AD158AD946 /* Pods-YourKitchen.release.xcconfig */,
+				71CF5C314F1EDFD0C368B6F2 /* Pods-YourKitchenTV.debug.xcconfig */,
+				E99CC1EF0563FA4FCC549BC2 /* Pods-YourKitchenTV.release.xcconfig */,
+				93B0372C1B430CC7A8221368 /* Pods-YourKitchenWidgetExtension.debug.xcconfig */,
+				F90B303943CED5E687C03B00 /* Pods-YourKitchenWidgetExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1426,10 +1426,10 @@
 				186A133624A100A3001531E3 /* TVServices.framework */,
 				18227921252FF77D003D4872 /* WidgetKit.framework */,
 				18227923252FF77D003D4872 /* SwiftUI.framework */,
-				95B006F54A9E45DA7A1642DF /* Pods_WatchOS_Extension.framework */,
-				3D5C5FC19564B939F26CEB4E /* Pods_YourKitchen.framework */,
-				9E5ED75863B8C093B3FC2F65 /* Pods_YourKitchenTV.framework */,
-				467009618158836A725CFC6C /* Pods_YourKitchenWidgetExtension.framework */,
+				250F8EFA24B3082C2CAD5306 /* Pods_WatchOS_Extension.framework */,
+				7C342EB94C1D230689AAC947 /* Pods_YourKitchen.framework */,
+				2EF8819955A567C43ABF7D90 /* Pods_YourKitchenTV.framework */,
+				05AB637E40868ED77FCBD5B0 /* Pods_YourKitchenWidgetExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1450,7 +1450,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18227930252FF77F003D4872 /* Build configuration list for PBXNativeTarget "YourKitchenWidgetExtension" */;
 			buildPhases = (
-				12105553F495EF687ED06E85 /* [CP] Check Pods Manifest.lock */,
+				0E66CBE51474316FFD68855F /* [CP] Check Pods Manifest.lock */,
 				1822791C252FF77D003D4872 /* Sources */,
 				1822791D252FF77D003D4872 /* Frameworks */,
 				1822791E252FF77D003D4872 /* Resources */,
@@ -1522,11 +1522,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 188BC99124ACB5870030F535 /* Build configuration list for PBXNativeTarget "WatchOS Extension" */;
 			buildPhases = (
-				34D1A141D84AB2DA7931CCE8 /* [CP] Check Pods Manifest.lock */,
+				BAB845E29E2B1F320FD48D58 /* [CP] Check Pods Manifest.lock */,
 				188BC96E24ACB5860030F535 /* Sources */,
 				188BC96F24ACB5860030F535 /* Frameworks */,
 				188BC97024ACB5860030F535 /* Resources */,
-				AA8B90C0F5670BFBE7CB3C4D /* [CP] Embed Pods Frameworks */,
+				B054352A4A4BE0870935FCA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1541,14 +1541,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18B6AA5D2451FA3900DA487E /* Build configuration list for PBXNativeTarget "YourKitchen" */;
 			buildPhases = (
-				8D98EE9BE9C137A9612CB9E7 /* [CP] Check Pods Manifest.lock */,
+				27A233D890275C0738F0D89B /* [CP] Check Pods Manifest.lock */,
 				18B6AA452451FA3800DA487E /* Sources */,
 				18B6AA462451FA3800DA487E /* Frameworks */,
 				18B6AA472451FA3800DA487E /* Resources */,
 				18289C7C248DB57C006332C4 /* Embed App Extensions */,
 				188BC98B24ACB5870030F535 /* Embed Watch Content */,
 				18E3D94E253E658B00CA83EB /* ShellScript */,
-				23CC0C89A289335F9990229A /* [CP] Copy Pods Resources */,
+				CDF24DAFA7E1FA29F8D26277 /* [CP] Embed Pods Frameworks */,
+				354C7EC4D6A430F6B1A5C0A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1570,12 +1571,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18E37BDD249D3FE700D62F6E /* Build configuration list for PBXNativeTarget "YourKitchenTV" */;
 			buildPhases = (
-				055BFA5C6250745412DBCE6E /* [CP] Check Pods Manifest.lock */,
+				06389F9DE7F4F44CC5F5C1AB /* [CP] Check Pods Manifest.lock */,
 				18E37BC8249D3FE100D62F6E /* Sources */,
 				18E37BC9249D3FE100D62F6E /* Frameworks */,
 				18E37BCA249D3FE100D62F6E /* Resources */,
 				186A133F24A100A4001531E3 /* Embed App Extensions */,
-				F5DFD29D43BAE3CC3A26B848 /* [CP] Embed Pods Frameworks */,
+				38B805FFD877AAEDBA7943B2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1732,7 +1733,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		055BFA5C6250745412DBCE6E /* [CP] Check Pods Manifest.lock */ = {
+		06389F9DE7F4F44CC5F5C1AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1754,7 +1755,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		12105553F495EF687ED06E85 /* [CP] Check Pods Manifest.lock */ = {
+		0E66CBE51474316FFD68855F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1793,46 +1794,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
-		23CC0C89A289335F9990229A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YourKitchen/Pods-YourKitchen-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YourKitchen/Pods-YourKitchen-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YourKitchen/Pods-YourKitchen-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		34D1A141D84AB2DA7931CCE8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WatchOS Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D98EE9BE9C137A9612CB9E7 /* [CP] Check Pods Manifest.lock */ = {
+		27A233D890275C0738F0D89B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1854,7 +1816,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AA8B90C0F5670BFBE7CB3C4D /* [CP] Embed Pods Frameworks */ = {
+		354C7EC4D6A430F6B1A5C0A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourKitchen/Pods-YourKitchen-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourKitchen/Pods-YourKitchen-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YourKitchen/Pods-YourKitchen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38B805FFD877AAEDBA7943B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourKitchenTV/Pods-YourKitchenTV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourKitchenTV/Pods-YourKitchenTV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YourKitchenTV/Pods-YourKitchenTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B054352A4A4BE0870935FCA6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1871,21 +1867,43 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WatchOS Extension/Pods-WatchOS Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F5DFD29D43BAE3CC3A26B848 /* [CP] Embed Pods Frameworks */ = {
+		BAB845E29E2B1F320FD48D58 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YourKitchenTV/Pods-YourKitchenTV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YourKitchenTV/Pods-YourKitchenTV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchOS Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YourKitchenTV/Pods-YourKitchenTV-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDF24DAFA7E1FA29F8D26277 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourKitchen/Pods-YourKitchen-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YourKitchen/Pods-YourKitchen-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YourKitchen/Pods-YourKitchen-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2242,7 +2260,7 @@
 /* Begin XCBuildConfiguration section */
 		1822792E252FF77F003D4872 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 161502E5250C46B96BA5C270 /* Pods-YourKitchenWidgetExtension.debug.xcconfig */;
+			baseConfigurationReference = 93B0372C1B430CC7A8221368 /* Pods-YourKitchenWidgetExtension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -2270,7 +2288,7 @@
 		};
 		1822792F252FF77F003D4872 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE361E9C5C23C0EE6D89D874 /* Pods-YourKitchenWidgetExtension.release.xcconfig */;
+			baseConfigurationReference = F90B303943CED5E687C03B00 /* Pods-YourKitchenWidgetExtension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
@@ -2435,7 +2453,7 @@
 		};
 		188BC98F24ACB5870030F535 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 707FD02427420192A636DB32 /* Pods-WatchOS Extension.debug.xcconfig */;
+			baseConfigurationReference = B8F0A10BB081CCAFB161FF80 /* Pods-WatchOS Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -2464,7 +2482,7 @@
 		};
 		188BC99024ACB5870030F535 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 859767B7CCD0B393B2D8EDD6 /* Pods-WatchOS Extension.release.xcconfig */;
+			baseConfigurationReference = 1C6D2DB2CF10F88744F2B7F9 /* Pods-WatchOS Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "WatchOS Extension/WatchOS ExtensionRelease.entitlements";
@@ -2612,7 +2630,7 @@
 		};
 		18B6AA5E2451FA3900DA487E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3CA8A70CEAACBBF1D192BB6 /* Pods-YourKitchen.debug.xcconfig */;
+			baseConfigurationReference = C2CC7033745E23422067ADA4 /* Pods-YourKitchen.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2630,6 +2648,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"c++\"",
@@ -2643,8 +2662,6 @@
 					"\"CoreTelephony\"",
 					"-framework",
 					"\"FBLPromises\"",
-					"-framework",
-					"\"FIRAnalyticsConnector\"",
 					"-framework",
 					"\"FirebaseAnalytics\"",
 					"-framework",
@@ -2687,7 +2704,7 @@
 		};
 		18B6AA5F2451FA3900DA487E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 074E5807F067BE59C3A6C6E5 /* Pods-YourKitchen.release.xcconfig */;
+			baseConfigurationReference = E2DD8498C40C48AD158AD946 /* Pods-YourKitchen.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2705,6 +2722,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"c++\"",
@@ -2718,8 +2736,6 @@
 					"\"CoreTelephony\"",
 					"-framework",
 					"\"FBLPromises\"",
-					"-framework",
-					"\"FIRAnalyticsConnector\"",
 					"-framework",
 					"\"FirebaseAnalytics\"",
 					"-framework",
@@ -2764,7 +2780,7 @@
 		};
 		18E37BDB249D3FE700D62F6E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24AC3648C6DC0295428E7D58 /* Pods-YourKitchenTV.debug.xcconfig */;
+			baseConfigurationReference = 71CF5C314F1EDFD0C368B6F2 /* Pods-YourKitchenTV.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
@@ -2793,7 +2809,7 @@
 		};
 		18E37BDC249D3FE700D62F6E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39D08DB6DEEA6FCD81F228E2 /* Pods-YourKitchenTV.release.xcconfig */;
+			baseConfigurationReference = E99CC1EF0563FA4FCC549BC2 /* Pods-YourKitchenTV.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";

@@ -45,7 +45,7 @@ final class NativeAdsViewController: NSObject, UIViewControllerRepresentable {
         #endif
 
         let rootViewController = UIApplication.shared.windows.first?.rootViewController
-        let adLoader = GADAdLoader(adUnitID: adUnitID, rootViewController: rootViewController, adTypes: [GADAdLoaderAdType.unifiedNative], options: nil)
+        let adLoader = GADAdLoader(adUnitID: adUnitID, rootViewController: rootViewController, adTypes: [GADAdLoaderAdType.native], options: nil)
         adLoader.delegate = self
 
         self.adLoader = adLoader
@@ -64,34 +64,35 @@ final class NativeAdsViewController: NSObject, UIViewControllerRepresentable {
     func updateUIViewController(_: UIViewController, context _: UIViewControllerRepresentableContext<NativeAdsViewController>) {}
 }
 
-extension NativeAdsViewController: GADUnifiedNativeAdLoaderDelegate {
-    func adLoader(_: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
+extension NativeAdsViewController: GADNativeAdLoaderDelegate {
+    func adLoader(_: GADAdLoader, didReceive nativeAd: GADNativeAd) {
         print("Loaded ad")
         templateView?.nativeAd = nativeAd
     }
 
-    func adLoader(_: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
+    func adLoader(_: GADAdLoader, didFailToReceiveAdWithError error: Error) {
+        print (error.localizedDescription)
         // Gets the domain from which the error came.
-        let errorDomain = error.domain
-        // Gets the error code. See
-        // https://developers.google.com/admob/ios/api/reference/Enums/GADErrorCode
-        // for a list of possible codes.
-        let errorCode = error.code
-        // Gets an error message.
-        // For example "Account not approved yet". See
-        // https://support.google.com/admob/answer/9905175 for explanations of
-        // common errors.
-        let errorMessage = error.localizedDescription
-        // Gets additional response information about the request. See
-        // https://developers.google.com/admob/ios/response-info for more information.
-        let responseInfo = error.userInfo[GADErrorUserInfoKeyResponseInfo] as? GADResponseInfo
-        // Gets the underlyingError, if available.
-        let underlyingError = error.userInfo[NSUnderlyingErrorKey] as? Error
-        if let responseInfo = responseInfo {
-            print("Received error with domain: \(errorDomain), code: \(errorCode),"
-              + "message: \(errorMessage), responseInfo: \(responseInfo),"
-              + "underLyingError: \(underlyingError?.localizedDescription ?? "nil")")
-        }
+//        let errorDomain = error
+//        // Gets the error code. See
+//        // https://developers.google.com/admob/ios/api/reference/Enums/GADErrorCode
+//        // for a list of possible codes.
+//        let errorCode = error
+//        // Gets an error message.
+//        // For example "Account not approved yet". See
+//        // https://support.google.com/admob/answer/9905175 for explanations of
+//        // common errors.
+//        let errorMessage = error.localizedDescription
+//        // Gets additional response information about the request. See
+//        // https://developers.google.com/admob/ios/response-info for more information.
+//        let responseInfo = error.userInfo[GADErrorUserInfoKeyResponseInfo] as? GADResponseInfo
+//        // Gets the underlyingError, if available.
+//        let underlyingError = error.userInfo[NSUnderlyingErrorKey] as? Error
+//        if let responseInfo = responseInfo {
+//            print("Received error with domain: \(errorDomain), code: \(errorCode),"
+//              + "message: \(errorMessage), responseInfo: \(responseInfo),"
+//              + "underLyingError: \(underlyingError?.localizedDescription ?? "nil")")
+//        }
         #if !DEBUG
             templateView?.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         #endif

@@ -34,9 +34,7 @@ struct InitialLoadView: View {
             }
         }.onAppear {
             self.loadNetwork()
-            Analytics.logEvent(AnalyticsEventScreenView,
-                               parameters: [AnalyticsParameterScreenName: "Initial Load",
-                                            AnalyticsParameterScreenClass: InitialLoadView.self])
+            Analytics.logEvent(AnalyticsEventAppOpen, parameters: nil)
         }
     }
     

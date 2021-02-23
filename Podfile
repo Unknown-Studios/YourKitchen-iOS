@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '13.0'
 
-use_frameworks! :linkage => :static
+use_frameworks!
 
 def shared_pods
   pod 'Alamofire', '~> 5.2'
@@ -17,7 +17,8 @@ target 'YourKitchen' do
   pod 'SwiftUIRefresh'
 
   # Crash analytics and regular analytics
-  pod 'Firebase/Analytics', '~> 7.3'
+  pod 'Firebase'
+  pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
 
   # Kingfisher
@@ -26,7 +27,7 @@ target 'YourKitchen' do
 
   # Firebase
   pod 'Firebase/Firestore'
-  pod 'FirebaseFirestoreSwift', '~> 7.3.0-beta'
+  pod 'FirebaseFirestoreSwift', '~> 7.6.0-beta'
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
   # pod 'GoogleMLKit/Translate'
@@ -63,7 +64,7 @@ target 'YourKitchenTV' do
   # Firebase
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'FirebaseFirestoreSwift', '~> 7.3.0-beta'
+  pod 'FirebaseFirestoreSwift', '~> 7.6.0-beta'
   pod 'Firebase/Storage'
 
 end
