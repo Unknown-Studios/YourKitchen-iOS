@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Checkout/Users/markusmoltke/Documents/Hobby/YourKitchen/YourKitcheniOS/fastlane/Fastfile
         uses: actions/checkout@v2
-      - uses: actions/cache@v1
+      - uses: actions/cache@v2
         with:
             path: Pods
             key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
