@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout/Users/markusmoltke/Documents/Hobby/YourKitchen/YourKitcheniOS/fastlane/Fastfile
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - uses: actions/cache@v2
         with:
             path: Pods
