@@ -26,7 +26,7 @@ jobs:
             gem install bundler
             gem install cocoapods
       - name: Run fastlane lane test
-        uses: maierj/fastlane-action@v1.4.0
+        uses: maierj/fastlane-action@v3.0.0
         env:
           FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
           FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
