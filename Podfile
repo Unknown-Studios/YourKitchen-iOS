@@ -17,7 +17,7 @@ target 'YourKitchen' do
   pod 'SwiftUIRefresh'
 
   # Crash analytics and regular analytics
-  pod 'Firebase/Analytics', '~> 7.1.0'
+  pod 'Firebase/Analytics', '~> 10.8.0'
   pod 'Firebase/Crashlytics'
 
   # Kingfisher
