@@ -26,7 +26,7 @@ target 'YourKitchen' do
 
   # Firebase
   pod 'Firebase/Firestore'
-  pod 'FirebaseFirestoreSwift', '~> 7.1.0-beta'
+  pod 'FirebaseFirestoreSwift', '~> 10.8.0'
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
   # pod 'GoogleMLKit/Translate'
@@ -63,7 +63,7 @@ target 'YourKitchenTV' do
   # Firebase
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'FirebaseFirestoreSwift', '~> 7.1.0-beta'
+  pod 'FirebaseFirestoreSwift', '~> 10.8.0'
   pod 'Firebase/Storage'
 
 end
